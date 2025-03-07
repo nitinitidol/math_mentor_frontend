@@ -1,0 +1,37 @@
+// Responsive media
+
+@mixin small_mobile {
+  @media (min-width: $small_mobile) and (max-width: $medium_iphone) {
+    @content;
+  }
+}
+@mixin large_mobile {
+  @media (min-width: $sm_mobile) and (max-width: $large_phone) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: $tablet_up) and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin tablet_up {
+  @media (min-width: $desktop_pro_up) and (max-width: $desktop_pro) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop_md) and (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin desktop_up {
+  @media (min-width: $desktop_up) {
+    @content;
+  }
+}
+@mixin desktop_up_lg {
+  @media (min-width: $desktop_up) and (max-width: $desktop_up_lg) {
+    @content;
+  }
+}
