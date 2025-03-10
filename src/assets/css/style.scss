@@ -77,7 +77,7 @@ input {
   font-weight: $font_medium;
   line-height: 24px;
   color: $secondary_text_color;
-  font-family: $font_family_plus_Jakarta;
+  // font-family: $font_family_plus_Jakarta;
   @include tablet {
     font-size: $font_sm;
     line-height: 20px;
@@ -113,6 +113,7 @@ input {
     font-weight: $font_medium;
     font-family: $font_family_body;
     margin-bottom: 5px;
+    text-align: left;
     span {
       color: $red_color;
     }
@@ -121,7 +122,7 @@ input {
       font-weight: 400;
       letter-spacing: 0.6px;
       font-family: $font_family_body;
-      color: $light_gray_color;
+      // color: $light_gray_color;
     }
   }
   .error-message {
@@ -137,7 +138,7 @@ input {
       border-radius: 8px;
       // padding-right: 0px;
       .MuiInputBase-input {
-        padding: 10.5px 14px;
+        padding: 12.5px 14px;
         // padding: 18.5px 14px;
         color: $primary_text_color;
         font-family: $font_family_body;
@@ -151,10 +152,10 @@ input {
           background-size: cover;
           background-repeat: no-repeat;
         }
-        &:hover {
-          background-color: $bg_light_color;
-          border-radius: 8px;
-        }
+        // &:hover {
+        //   background-color: $bg_light_color;
+        //   border-radius: 8px;
+        // }
       }
       .MuiOutlinedInput-notchedOutline {
         border-color: $input_border-color;
@@ -185,7 +186,7 @@ input {
                 border-right: 1px solid $input_border-color;
               }
               .MuiSvgIcon-root {
-                background-image: url("../images/vector/selectdownArrow.svg");
+                background-image: url("../images/vactor/selectdownArrow.svg");
                 background-repeat: no-repeat;
                 color: transparent;
                 background-size: 60% 100%;
@@ -224,7 +225,7 @@ input {
         padding: 0px;
         .MuiAutocomplete-endAdornment {
           .MuiAutocomplete-popupIndicator {
-            background-image: url("../images/vector/selectdownArrow.svg");
+            background-image: url("../images/vactor/selectdownArrow.svg");
             // width: 24px;
             // height: 15px;
             background-repeat: no-repeat;
@@ -292,7 +293,7 @@ input {
         padding: 0 0 0 14px;
         .flag {
           .arrow {
-            background-image: url("../images/vector/selectdownArrow.svg");
+            background-image: url("../images/vactor/selectdownArrow.svg");
             background-repeat: no-repeat;
             color: transparent;
             background-size: 60% 100%;
@@ -316,12 +317,12 @@ input {
         padding: 0px;
         border-radius: 8px;
         .MuiInputBase-input {
-          padding: 10.5px 14px;
+          padding: 12.5px 14px;
           color: $secondary_text_color;
           font-family: $font_family_body;
           font-size: $font_md;
           font-weight: $font_normal;
-          margin-left: 40px;
+          // margin-left: 40px;
         }
         &.Mui-focused {
           .MuiOutlinedInput-notchedOutline {
@@ -331,16 +332,16 @@ input {
         &:hover .MuiOutlinedInput-notchedOutline {
           border-color: $input_border-color;
         }
-        &:hover {
-          background-color: $bg_light_color;
-          border-radius: 8px;
-        }
+        // &:hover {
+        //   background-color: $bg_light_color;
+        //   border-radius: 8px;
+        // }
         .MuiInputAdornment-root {
           position: absolute;
           // display: none;
           .MuiButtonBase-root {
             margin-right: 0px;
-            background-image: url("../images/vector/calendar.svg");
+            // background-image: url("../images/vector/calendar.svg");
             // width: 24px;
             // height: 15px;
             background-repeat: no-repeat;
@@ -408,7 +409,7 @@ input {
       display: none;
     }
     .MuiSvgIcon-root {
-      background-image: url("../images/vector/selectdownArrow.svg");
+      background-image: url("../images/vactor/selectdownArrow.svg");
       background-repeat: no-repeat;
       color: transparent;
       background-size: 60% 100%;
@@ -422,7 +423,7 @@ input {
   font-weight: $font_semibold;
   line-height: 56px;
   color: $White_color;
-  font-family: $font_family_plus_Jakarta;
+  // font-family: $font_family_plus_Jakarta;
   @include tablet_up {
     font-size: $font_3xl;
     line-height: 40px;
@@ -445,7 +446,7 @@ input {
   font-weight: $font_normal;
   line-height: 26px;
   color: $White_color;
-  font-family: $font_family_plus_Jakarta;
+  // font-family: $font_family_plus_Jakarta;
   @include tablet {
     font-size: $font_sm;
     line-height: 20px;
@@ -464,29 +465,29 @@ input {
   font-weight: $font_normal;
   line-height: 20px;
   letter-spacing: 0.6px;
-  color: $light_gray_color;
+  // color: $light_gray_color;
   font-family: $font_family_body;
   margin: 0px;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  border-radius: 6px;
-}
+// .custom-scrollbar::-webkit-scrollbar {
+//   width: 6px;
+//   border-radius: 6px;
+// }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: $border_light_color;
-  border-radius: 6px;
-}
+// .custom-scrollbar::-webkit-scrollbar-track {
+//   background: $border_light_color;
+//   border-radius: 6px;
+// }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: $input_border-color;
-  border-radius: 6px;
-}
+// .custom-scrollbar::-webkit-scrollbar-thumb {
+//   background: $input_border-color;
+//   border-radius: 6px;
+// }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: $light_gray_color;
-}
+// .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+//   background: $light_gray_color;
+// }
 
 .MuiAutocomplete-listbox {
   .MuiListItem-root {
@@ -496,243 +497,6 @@ input {
         font-weight: 400;
         color: $secondary_text_color;
         font-family: $font_family_body;
-      }
-    }
-  }
-}
-
-//  start common table component scss
-.common-table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  .MuiTableContainer-root {
-    .MuiTable-root {
-      .MuiTableHead-root {
-        .MuiTableRow-root {
-          .MuiTableCell-root {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            color: $secondary_text_color;
-            font-family: $font_family_body;
-            padding: 12px 12px;
-          }
-        }
-      }
-      .MuiTableBody-root {
-        background-color: $White_color;
-        .MuiTableRow-root {
-          .MuiTableCell-root {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            color: $primary_text_color;
-            font-family: $font_family_body;
-            padding: 12px 12px;
-            white-space: nowrap;
-            .user-name-block {
-              display: flex;
-              align-items: center;
-              gap: 16px;
-              white-space: nowrap;
-              .user-name-img {
-                width: 40px;
-                min-width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                position: relative;
-                .user-verified-badge {
-                  position: absolute;
-                  top: -2px;
-                  right: -10px;
-                }
-                .user-image {
-                  width: 100%;
-                  height: 100%;
-                  border-radius: 50%;
-                  object-fit: cover;
-                }
-              }
-              .user-name-text {
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 20px;
-                color: $primary_text_color;
-                font-family: $font_family_body;
-              }
-            }
-
-            .td-actions-block {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              .actions-btn {
-                min-width: 34px;
-                border: 0px;
-                border-radius: 0px;
-                background-color: transparent;
-                &:focus {
-                  outline: 0;
-                  box-shadow: none;
-                }
-              }
-            }
-            .td-status-block {
-              .status-badge {
-                padding: 2px 8px;
-                border-radius: 30px;
-                text-align: center;
-                font-size: 12px;
-                font-weight: 500;
-                font-family: $font_family_body;
-                &.active-badge {
-                  color: $green_darker_color;
-                  background-color: lighten($green_darker_color, 60%);
-                }
-                &.inactive-badge {
-                  color: $error_color;
-                  background-color: lighten($error_color, 45%);
-                }
-              }
-            }
-            .file-info-wrapper {
-              display: flex;
-              align-items: center;
-              justify-content: flex-start;
-            }
-
-            .file-upload-icon {
-              margin-right: 0.5rem;
-            }
-
-            .filename {
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.pagination-block {
-  padding: 30px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  @include tablet {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  @include large_mobile {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  @include small_mobile {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .page-num {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: $secondary_text_color;
-    font-family: $font_family_body;
-    span {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      color: $secondary_text_color;
-      font-family: $font_family_body;
-    }
-  }
-
-  .table-pagination {
-    .MuiPagination-ul {
-      li {
-        &:first-child {
-          .MuiButtonBase-root {
-            &.MuiPaginationItem-firstLast {
-              border-radius: 0px;
-              border: 0px;
-              .MuiSvgIcon-root {
-                background-image: url("../../assets/images/admin/right-2arrow.svg");
-                background-repeat: no-repeat;
-                color: transparent;
-                background-size: 60% 100%;
-                background-position: center center;
-                transform: scaleX(-1);
-                -moz-transform: scaleX(-1);
-                -webkit-transform: scaleX(-1);
-                -ms-transform: scaleX(-1);
-              }
-            }
-          }
-        }
-        .MuiButtonBase-root {
-          border-radius: 6px;
-          border: 1px solid $input_border-color;
-          width: 32px;
-          min-width: 32px;
-          height: 32px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 20px;
-          color: $secondary_text_color;
-          font-family: $font_family_body;
-          background-color: $White_color;
-          &.Mui-disabled {
-          }
-
-          &.Mui-selected {
-            background-color: $input_border-color;
-            color: $primary_text_color;
-          }
-          &.MuiPaginationItem-previousNext {
-            border-radius: 0px;
-            border: 0px;
-          }
-          &.MuiPaginationItem-firstLast {
-            border-radius: 0px;
-            border: 0px;
-            .MuiSvgIcon-root {
-              background-image: url("../../assets/images/admin/right-2arrow.svg");
-              background-repeat: no-repeat;
-              color: transparent;
-              background-size: 60% 100%;
-              background-position: center center;
-            }
-          }
-        }
-      }
-    }
-  }
-  .select-pageno {
-    border: 1px solid $input_border-color;
-    border-radius: 10px;
-    .MuiInputBase-root {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 20px;
-      color: $primary_text_color;
-      font-family: $font_family_body;
-      padding: 2px 10px;
-      &::before {
-        display: none;
-      }
-      &::after {
-        display: none;
-      }
-      .MuiSvgIcon-root {
-        background-image: url("../../assets/images/vector/selectdownArrow.svg");
-        background-repeat: no-repeat;
-        color: transparent;
-        background-size: 60% 100%;
-        background-position: center center;
       }
     }
   }
