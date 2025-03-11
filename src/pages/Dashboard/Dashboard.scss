@@ -3,5 +3,11 @@
 .dashboard-wrapper{
     .dashboard-main-content-wrap{
         display: flex;
+        .chat-content-wrapper{
+            display: flex;
+            gap: 16px;
+            background-color: #F9FAFB;
+            width: 100%;
+        }
     }
 }

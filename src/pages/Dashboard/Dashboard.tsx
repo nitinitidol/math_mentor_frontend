@@ -1,7 +1,10 @@
 import React from 'react';
 import "../Dashboard/Dashboard.scss";
 import TopHeader from '../../components/TopHeader/TopHeader'
-import Sidebar from '../../components/Sidebar/Sidebar'
+import Sidebar from '../../components/Sidebar/Sidebar';
+import { extendTheme } from '@mui/material/styles';
+import ChatHistory from '../../components/ChatHistory/ChatHistory';
+import ChatBox from '../../components/ChatBox/ChatBox';
 
 const Dashboard = () => {
   return (
@@ -10,11 +13,14 @@ const Dashboard = () => {
         <TopHeader/>
         <div className="dashboard-main-content-wrap">
             <Sidebar/>
-            <div>
-                <h1>Chat box</h1>
+            <div className='chat-content-wrapper'>
+                <ChatHistory/>
+
+                <ChatBox/>
             </div>
         </div>
     </div>
+       
     </>
   )
 }

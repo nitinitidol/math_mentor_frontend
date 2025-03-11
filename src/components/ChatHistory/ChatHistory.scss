@@ -1,0 +1,77 @@
+@import "../../assets/css/variable/variable";
+
+.chat-history-wrapper{
+    padding: 32px 24px;
+    background-color: $White_color;
+    width: 100%;
+    max-width: 306px;
+    .chat-history-header{
+        .new-chat-btn{
+            border-radius: 4px;
+            background-color: $White_color;
+            border: 1px solid $primary_color;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            height: 48px;
+            min-width: 258px;
+            width: 100%;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: $font_family_body;
+            color: $primary_color;
+        }
+    }
+    .chat-history-list{
+        height: 450px;
+        overflow-y: auto;
+        // padding-top: 40px;
+        .chat-history-lable{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+            color: $secondary_text_color;
+            font-family: $font_family_body;
+            margin-bottom: 16px;
+            margin-top: 40px;
+        }
+        .history-list{
+            padding: 0px ;
+            .MuiListItem-root{
+                border-radius: 4px;
+                .MuiListItemButton-root{
+                    border-radius: 4px;
+                    padding: 0px 4px;
+                    &:hover{
+                        background-color: transparent;
+                    }
+                    .MuiListItemText-root{
+                        .MuiTypography-root{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $secondary_text_color;
+                            font-family: $font_family_body;
+                        }
+                    }
+                }
+                .MuiListItemSecondaryAction-root{
+                    .MuiIconButton-root{
+                        min-width: 30px;
+                    }
+                }
+                &:hover{
+                    background-color: #F6F8FA;
+                    .MuiListItemButton-root{
+                        background-color: #F6F8FA;
+                    }
+                    .MuiListItemSecondaryAction-root{
+                        background-color: #F6F8FA;
+                       
+                    }
+                }
+            }
+        }
+    }
+}

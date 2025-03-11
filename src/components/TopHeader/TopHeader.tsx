@@ -30,12 +30,21 @@ const TopHeader = () => {
   };
   return (
     <>
-      <header className="top-header-section">
+      <header className="top-header-section sticky-top">
         <nav className="navbar navbar-expand-lg navbar-light ">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
               <img src={HeaderLogo} alt="HeaderLogo" />
             </Link>
+              <a
+        className="btn btn-primary"
+        data-bs-toggle="offcanvas"
+        href="#offcanvasExample"
+        role="button"
+        aria-controls="offcanvasExample"
+      >
+        Link
+      </a>
             <button
               className="navbar-toggler"
               type="button"
