@@ -1,0 +1,246 @@
+@import "../../assets/css/variable/variable";
+
+.top-header-section {
+    padding: 0px 80px;
+    border-bottom: 1px solid $border_light_color;
+    .navbar{
+        padding: 10.5px 0px;
+    }
+    .top-right-menu {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .notification-badge {
+            position: relative;
+            min-width: 34px;
+            .status-badge {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                border-radius: 50px;
+                width: 8px;
+                min-width: 8px;
+                height: 8px;
+                background-color: $error_color;
+                border: 2px solid $White_color;
+            }
+        }
+
+        .login-user-profile {
+            padding: 4px;
+            border-radius: 4px;
+            border: 1px solid $input_border-color;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 172px;
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 500;
+            color: $primary_text_color;
+            font-family: $font_family_body;
+
+            .user-profile {
+                width: 32px;
+                min-width: 32px;
+                height: 32px;
+                border-radius: 4px;
+
+                img {
+                    border-radius: 4px;
+                }
+
+                .login-user-name {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $primary_text_color;
+                    font-family: $font_family_body;
+                }
+            }
+        }
+    }
+}
+
+.user-setting-dropdown{
+    .MuiPaper-root{
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        background-color: $White_color;
+        border: 1px solid $border_light_color;
+        padding: 16px;
+        width: 100%;
+        max-width: 286px;
+        border-radius: 12px;
+        ul{
+            padding: 0px;
+            li{
+                padding: 8px 16px;
+                margin: 8px 0px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                font-family: $font_family_body;
+                span{
+                    color: $primary_text_color;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    font-family: $font_family_body;
+                }
+                &.active{
+                    color: $primary_color;
+                    font-weight: 400;
+                    background-color: $light_blue_hover;
+                    border-radius: 8px;
+                    svg{
+                        path{
+                            fill: $primary_color;
+                        }
+                    }
+                }
+                &:hover{
+                    background-color: $light_blue_hover;
+                    border-radius: 8px;
+                    color: $primary_color;
+                    font-weight: 400;
+                    svg{
+                        path{
+                            fill: $primary_color;
+                        }
+                    }
+                    span{
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+        .user-setting-head{
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            // border-bottom: 1px solid $border_light_color;
+            .user-setting-img{
+                width: 44px;
+                min-width: 44px;
+                height: 44px;
+                border-radius: 4px;
+            }
+            .user-setting-content{
+                .user-name{
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    color: $primary_text_color;
+                    font-family: $font_family_body;
+                }
+                .user-email{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    color: $secondary_text_color;
+                    font-family: $font_family_body;
+                }
+            }
+        }
+
+    }
+}
+.notify-dropdown{
+    .MuiPaper-root{
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        background-color: $White_color;
+        border: 1px solid $border_light_color;
+        padding: 16px 16px 0px 16px; 
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+        ul{
+            padding-bottom: 0px;
+            .notify-head{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding-bottom: 8px;
+                .notify-head-title{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $primary_text_color;
+                    font-family: $font_family_body;
+                    margin: 0px;
+                }
+                .mark-read{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $primary_color;
+                    font-family: $font_family_body;   
+                    text-decoration: none;    
+                }
+               
+            }
+            li{
+                &.notify-items{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 8px;
+                    margin: 8px 0px;
+                    &.recent-item{
+                        border-bottom: 2px solid $primary_color;
+                        background-color: $light_blue_hover;
+                        .notify-items-text{
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            color: $primary_text_color;
+                            font-family: $font_family_body; 
+                            margin: 0px; 
+                            white-space: pre-wrap;
+                        }
+                    }
+                    .notify-items-text{
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        color:$secondary_text_color;
+                        font-family: $font_family_body; 
+                        margin: 0px; 
+                        white-space: pre-wrap;
+                    }
+                    .notify-items-time{
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        color: $secondary_text_color;
+                        font-family: $font_family_body; 
+                        margin: 0px;
+                    }
+                }
+            }
+
+            .notify-footer{
+                border-top: 1px solid $input_border-color;
+                background-color: $White_color;
+                font-size: 16px;
+                font-weight: 400;
+                color: $primary_color;
+                text-align: center;
+                font-family: $font_family_body;
+                padding: 10px 0px 20px 0px;
+                position: sticky;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                a{
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    justify-content: center;
+                }
+            }
+        }
+
+    }
+}
