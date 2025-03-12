@@ -1,0 +1,152 @@
+@import "../../assets/css/variable/variable";
+
+.auth-wrapper{
+    height: 100%;
+    .auth-banner-block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 16px 16px;
+        background: linear-gradient(90deg, #EEF2FF 0%, #EFF6FF 100%);
+        .auth-banner-content{
+            max-width: 448px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .auth-banner-img{
+                padding: 0px 32px;
+                img{
+                    width: 100%;
+                    @include small_mobile {
+                        max-width: 75%;
+                    }
+                }
+            }
+            .banner-content-title{
+                font-size: $font_3xl;
+                font-weight: $font_bold;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+                line-height: 30px;
+                text-align: center;
+                margin-top: 44px;
+            }
+            .banner-content-dsc-text{
+                font-size: $font_lg;
+                font-weight: $font_normal;
+                color: $secondary_text_color;
+                font-family: $font_family_body;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.auth-form-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 16px 16px;
+    @include desktop {
+        height: 100%;
+    }
+    @include desktop_up_lg {
+        // height: 100vh;
+    }
+    .auth-form-content-block{
+        width: 100%;
+        max-width: 420px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .forgot-link{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -16px;
+            a{
+                color: $error_color;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 24px;
+                font-family: $font_family_body;
+                text-decoration: none;
+            }
+        }
+        .auth-logo{
+            width: 100%;
+            max-width: 223px;
+            text-align: center;
+            margin-bottom: 32px;
+            @include small_mobile {
+                max-width: 150px;
+            }
+            img{
+                // width: 100%;
+            }
+        }
+        .content-dsc-text{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            text-align: center;
+            color: $secondary_text_color;
+            font-family: $font_family_body;
+            margin: 0px 0px 32px 0px;
+        }
+        .content-subdsc-text{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            color: $secondary_text_color;
+            font-family: $font_family_body;
+            margin: 0px 0px 32px 0px;
+        }
+        .auth-action-control{
+            margin-top: 24px;
+            button{
+                width: 100%;
+            }
+        }
+        .auth-info-text{
+            font-size: $font_sm;
+            font-weight: $font_normal;
+            color: $secondary_text_color;
+            text-align: center;
+            margin: 0px;
+            margin-top: 24px;
+            font-family: $font_family_body;
+            .auth-link{
+                color: $primary_color;
+                font-family: $font_family_body;
+                text-decoration: none;
+            }
+        }
+        .back-btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            button{
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                color: $secondary_text_color;
+                font-family: $font_family_body;
+                font-size: 14px;
+                font-weight: 400;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+}

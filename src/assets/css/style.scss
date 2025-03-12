@@ -1,0 +1,595 @@
+@import "variable/variable";
+
+.container {
+  max-width: 1540px;
+}
+.container__md {
+  max-width: 970px;
+}
+input {
+  &:focus {
+    outline: 0px;
+    box-shadow: none;
+  }
+}
+.MuiFormControlLabel-root {
+  .MuiRadio-root {
+    &.Mui-checked {
+      color: $primary_color;
+    }
+  }
+}
+.drawer-form-h {
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.remove-field-btn {
+  min-width: 34px !important;
+  padding: 0px !important;
+  margin-bottom: 7px !important;
+}
+.title-slogan-text {
+  font-size: $font_xl;
+  font-weight: $font_semibold;
+  line-height: 28px;
+  color: $primary_color;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: $font_family_body;
+  @include small_mobile {
+    font-size: $font_lg;
+    line-height: 24px;
+  }
+}
+.title-text {
+  font-size: $font_4xl;
+  font-weight: $font_semibold;
+  line-height: 56px;
+  color: $primary_text_color;
+  font-family: $font_family_body;
+  @include tablet_up {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+  @include tablet {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+  @include large_mobile {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+  @include small_mobile {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+}
+.title-bottom-border {
+  height: 4px;
+  background-color: $primary_color;
+  width: 147px;
+  margin-bottom: 16px;
+}
+.sub-dsc-text {
+  font-size: $font_md;
+  font-weight: $font_medium;
+  line-height: 24px;
+  color: $secondary_text_color;
+  // font-family: $font_family_plus_Jakarta;
+  @include tablet {
+    font-size: $font_sm;
+    line-height: 20px;
+  }
+  @include large_mobile {
+    font-size: $font_sm;
+    line-height: 20px;
+  }
+  @include small_mobile {
+    font-size: $font_sm;
+    line-height: 20px;
+  }
+}
+// MuiCheckbox
+.MuiCheckbox-root {
+  padding: 0px 10px;
+  &.Mui-checked {
+    color: $primary_color !important;
+  }
+  &.MuiCheckbox-indeterminate {
+    color: $primary_color !important;
+  }
+}
+// Customize text field
+.input-form-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+  label {
+    color: $secondary_text_color;
+    font-size: $font_sm;
+    font-weight: $font_medium;
+    font-family: $font_family_body;
+    margin-bottom: 5px;
+    text-align: left;
+    span {
+      color: $red_color;
+    }
+    .label-note {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      font-family: $font_family_body;
+      // color: $light_gray_color;
+    }
+  }
+  .error-message {
+    color: $error_color;
+    border-color: $error_color;
+    font-size: $font_xs;
+    font-weight: $font_normal;
+    font-family: $font_family_body;
+  }
+  .out-label-input-text {
+    margin-top: 0px;
+    .MuiInputBase-formControl {
+      border-radius: 8px;
+      // padding-right: 0px;
+      .MuiInputBase-input {
+        padding: 12.5px 14px;
+        // padding: 18.5px 14px;
+        color: $primary_text_color;
+        font-family: $font_family_body;
+        font-size: $font_md;
+        font-weight: $font_normal;
+        &.textarea-input-field {
+          padding: 0px;
+        }
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        // &:hover {
+        //   background-color: $bg_light_color;
+        //   border-radius: 8px;
+        // }
+      }
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $input_border-color;
+        border-width: 1px;
+      }
+      .MuiInputAdornment-positionStart {
+        margin-right: 0px;
+        .MuiButtonBase-root {
+          margin-left: 0px;
+        }
+        .input-group-text-label {
+          border-right: 1px solid $input_border-color;
+          padding: 10px 10px 10px 0px;
+        }
+        .input-group-contry-code {
+          .MuiFormControl-root {
+            margin: 0px;
+            min-width: 80px;
+            .MuiOutlinedInput-root {
+              border-radius: 0px;
+              border: 0px;
+              .MuiSelect-select {
+                padding-left: 0px;
+                border-left: 0px;
+              }
+              .MuiOutlinedInput-notchedOutline {
+                border: 0px;
+                border-right: 1px solid $input_border-color;
+              }
+              .MuiSvgIcon-root {
+                background-image: url("../images/vactor/selectdownArrow.svg");
+                background-repeat: no-repeat;
+                color: transparent;
+                background-size: 60% 100%;
+                background-position: center center;
+              }
+            }
+          }
+        }
+      }
+      .MuiInputAdornment-positionEnd {
+        // margin-left: 0px;
+        .MuiButtonBase-root {
+          margin: 0px;
+        }
+      }
+      &.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: $input_border-color;
+        }
+      }
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: $input_border-color;
+      }
+    }
+    &.file-copy-input-text {
+      .MuiOutlinedInput-root {
+        .MuiOutlinedInput-input {
+          border-right: 1px solid $input_border-color;
+        }
+      }
+    }
+  }
+  .MuiAutocomplete-root {
+    .out-label-input-text {
+      .MuiInputBase-root {
+        padding: 0px;
+        .MuiAutocomplete-endAdornment {
+          .MuiAutocomplete-popupIndicator {
+            background-image: url("../images/vactor/selectdownArrow.svg");
+            // width: 24px;
+            // height: 15px;
+            background-repeat: no-repeat;
+            color: transparent;
+            background-size: 60% 100%;
+            background-position: center center;
+          }
+        }
+      }
+    }
+  }
+  .input-icon {
+    position: absolute;
+    right: 12px;
+    top: 63%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+  textarea {
+    &:hover {
+      background-color: $bg_light_color;
+      border-radius: 8px;
+    }
+  }
+  .add-sub-cate-textfield {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  // rect input Phone lib
+  .react-tel-input {
+    .form-control {
+      border: 1px solid $input_border-color;
+      border-radius: 8px;
+      height: 44px;
+      width: 100%;
+      padding-left: 90px;
+      color: $primary_text_color;
+      font-family: $font_family_body;
+      font-size: $font_md;
+      font-weight: $font_normal;
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+      &:hover {
+        background-color: $bg_light_color;
+        border-radius: 8px;
+      }
+    }
+    .flag-dropdown {
+      border: 1px solid $input_border-color;
+      border-radius: 8px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      min-width: 70px;
+      background-color: $White_color;
+      &.open {
+        border-radius: 6px 0 0 6px;
+      }
+      .selected-flag {
+        border-radius: 6px 0 0 6px;
+        padding: 0 0 0 14px;
+        .flag {
+          .arrow {
+            background-image: url("../images/vactor/selectdownArrow.svg");
+            background-repeat: no-repeat;
+            color: transparent;
+            background-size: 60% 100%;
+            background-position: center center;
+            width: 20px;
+            height: 20px;
+            border: 0px;
+            margin-top: -10px;
+            left: 25px;
+          }
+        }
+      }
+    }
+    .country-list {
+      border-radius: 6px;
+    }
+  }
+  &.datepicker-field-wrapper {
+    .MuiFormControl-root {
+      .MuiInputBase-root {
+        padding: 0px;
+        border-radius: 8px;
+        .MuiInputBase-input {
+          padding: 12.5px 14px;
+          color: $secondary_text_color;
+          font-family: $font_family_body;
+          font-size: $font_md;
+          font-weight: $font_normal;
+          // margin-left: 40px;
+        }
+        &.Mui-focused {
+          .MuiOutlinedInput-notchedOutline {
+            border-color: $input_border-color;
+          }
+        }
+        &:hover .MuiOutlinedInput-notchedOutline {
+          border-color: $input_border-color;
+        }
+        // &:hover {
+        //   background-color: $bg_light_color;
+        //   border-radius: 8px;
+        // }
+        .MuiInputAdornment-root {
+          position: absolute;
+          // display: none;
+          .MuiButtonBase-root {
+            margin-right: 0px;
+            // background-image: url("../images/vector/calendar.svg");
+            // width: 24px;
+            // height: 15px;
+            background-repeat: no-repeat;
+            color: transparent;
+            background-size: 60% 100%;
+            background-position: center center;
+          }
+        }
+      }
+    }
+  }
+  &.timepicker-field-wrapper {
+    .MuiFormControl-root {
+      .MuiInputBase-root {
+        padding: 0px;
+        border-radius: 8px;
+        .MuiInputBase-input {
+          padding: 10.5px 14px;
+          color: $primary_text_color;
+          font-family: $font_family_body;
+          font-size: $font_md;
+          font-weight: $font_normal;
+          margin-left: 40px;
+        }
+        &.Mui-focused {
+          .MuiOutlinedInput-notchedOutline {
+            border-color: $input_border-color;
+          }
+        }
+        &:hover .MuiOutlinedInput-notchedOutline {
+          border-color: $input_border-color;
+        }
+        .MuiInputAdornment-root {
+          position: absolute;
+          .MuiButtonBase-root {
+            margin-right: 0px;
+            // background-image: url('../images/vector/time-picker.svg');
+            // width: 24px;
+            // height: 15px;
+            background-repeat: no-repeat;
+            color: transparent;
+            background-size: 60% 100%;
+            background-position: center center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.select-input-text-end {
+  width: 150px;
+  .MuiInputBase-root {
+    color: $primary_text_color;
+    font-family: $font_family_body;
+    font-size: $font_md;
+    font-weight: $font_normal;
+    border-left: 1px solid $input_border-color;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+    .MuiSvgIcon-root {
+      background-image: url("../images/vactor/selectdownArrow.svg");
+      background-repeat: no-repeat;
+      color: transparent;
+      background-size: 60% 100%;
+      background-position: center center;
+    }
+  }
+}
+// -------------------------  Admin css -----------------------------------
+.au-title-text {
+  font-size: $font_4xl;
+  font-weight: $font_semibold;
+  line-height: 56px;
+  color: $White_color;
+  // font-family: $font_family_plus_Jakarta;
+  @include tablet_up {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+  @include tablet {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+  @include large_mobile {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+  @include small_mobile {
+    font-size: $font_3xl;
+    line-height: 40px;
+  }
+}
+.au-sub-dsc-text {
+  font-size: $font_lg;
+  font-weight: $font_normal;
+  line-height: 26px;
+  color: $White_color;
+  // font-family: $font_family_plus_Jakarta;
+  @include tablet {
+    font-size: $font_sm;
+    line-height: 20px;
+  }
+  @include large_mobile {
+    font-size: $font_sm;
+    line-height: 20px;
+  }
+  @include small_mobile {
+    font-size: $font_sm;
+    line-height: 20px;
+  }
+}
+.au-sub-title {
+  font-size: $font_sm;
+  font-weight: $font_normal;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  // color: $light_gray_color;
+  font-family: $font_family_body;
+  margin: 0px;
+}
+
+// .custom-scrollbar::-webkit-scrollbar {
+//   width: 6px;
+//   border-radius: 6px;
+// }
+
+// .custom-scrollbar::-webkit-scrollbar-track {
+//   background: $border_light_color;
+//   border-radius: 6px;
+// }
+
+// .custom-scrollbar::-webkit-scrollbar-thumb {
+//   background: $input_border-color;
+//   border-radius: 6px;
+// }
+
+// .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+//   background: $light_gray_color;
+// }
+
+.MuiAutocomplete-listbox {
+  .MuiListItem-root {
+    .MuiListItemText-root {
+      .MuiTypography-root {
+        font-size: 14px;
+        font-weight: 400;
+        color: $secondary_text_color;
+        font-family: $font_family_body;
+      }
+    }
+  }
+}
+
+.popup-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  .control-check {
+    .MuiFormControlLabel-label {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $primary_text_color;
+      font-family: $font_family_body;
+    }
+  }
+  .popup-footer-action {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+.check-cercel {
+  &.error-label {
+    background-color: lighten($red_color, 45%);
+  }
+}
+
+.actions-menu-popup {
+  .MuiPaper-root {
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+    .MuiMenu-list {
+      .MuiMenuItem-root {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $secondary_text_color;
+        font-family: $font_family_body;
+        &:hover {
+          color: $primary_text_color;
+        }
+      }
+    }
+  }
+}
+
+.verified-notify-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  .verified-badge-notify {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $secondary_text_color;
+    font-family: $font_family_body;
+    letter-spacing: 0.6px;
+    line-height: 20px;
+  }
+}
+//  End common table component scss
+
+.common-card-wrap {
+  border-radius: 16px !important;
+  background-color: $White_color;
+  border: 1px solid $input_border-color;
+  padding: 16px !important;
+  box-shadow: 0px 1px 2px 0px #e4e5e73d !important;
+}
+.active-item {
+  background-color: #f1f1f1;
+  &::before {
+    content: "";
+    background-color: $primary_color;
+    height: 20px;
+    width: 4px;
+    position: absolute;
+    left: -15px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../assets/css/variable/variable";
+.sidebar-wrapper{
+    .offcanvas-start{
+        // margin-top: 84px;
+        height: 100%;
+        width: 80px;
+        @include desktop{
+            position: static;
+        }
+        @include desktop_up{
+            position: static;
+        }
+        @include tablet_up{
+            position: static;
+        }
+        @include tablet{
+            position: fixed;
+            width: 250px;
+        }
+        @include large_mobile{
+            position: fixed;
+            width: 250px;
+        }
+        @include small_mobile{
+            position: fixed;
+            width: 250px;
+        }
+        .offcanvas-header{
+            display: none;
+            // @include tablet_up{
+            //     display: block;
+            // }
+            @include tablet{
+                display: block;
+            }
+            @include large_mobile{
+                display: block;
+            }
+            @include small_mobile{
+                display: block;
+            }
+        }
+    }
+    .offcanvas-body{
+        .sidebar-menu{
+            .MuiList-root{
+                .MuiListItem-root{
+                    margin: 16px 0px;
+                    .MuiListItemButton-root{
+                        padding: 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 52px;
+                        border-radius: 4px;
+                        .MuiListItemIcon-root{
+                            min-width: 52px;
+                            min-height: 52px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .MuiListItemText-root{
+                            @include desktop_up{
+                                display: none;
+                            }
+                            @include desktop{
+                                display: none;
+                            }
+                            @include tablet_up{
+                                display: none;
+                            }
+                        }
+                        &:hover{
+                            background-color: $light_blue_hover;
+                            .MuiListItemIcon-root{
+                                svg{
+                                    path{
+                                        fill: $primary_color;
+                                    }
+                                }
+                            }
+                        }
+                        &.active{
+                            background-color: $light_blue_hover;
+                            .MuiListItemIcon-root{
+                                svg{
+                                    path{
+                                        fill: $primary_color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
