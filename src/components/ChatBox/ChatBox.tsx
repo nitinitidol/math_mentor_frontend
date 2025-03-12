@@ -16,36 +16,44 @@ const ChatBox = () => {
               </div>
               <div className="receive-chat-text">
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Sapiente, itaque.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda odio pariatur consequuntur modi! Quo eligendi itaque
-                  pariatur numquam soluta, assumenda doloremque dolores iusto
-                  saepe magnam atque placeat voluptas quisquam ut!
+                Hello! I'm your YULI. How can I help you today with your mathematics questions?
                 </p>
               </div>
             </div>
             <div className="send-chat">
               <div className="send-chat-text">
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque quis dolorum incidunt laborum ipsum dolor officiis?
-                  Expedita at molestiae repudiandae.
+                Can you help me understand quadratic equations?
                 </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
-                  maiores aspernatur, totam voluptatum consequatur vitae fuga
-                  dolor accusamus sequi quod porro dicta quibusdam aliquid sint
-                  ratione error similique magnam animi?
-                </p>
+                
               </div>
               <div className="chat-icon">
                 <img src={SendChatUser} alt="" />
               </div>
             </div>
             <div className="receive-chat">
+              <div className="chat-icon">
+                <img src={ReceiveChatIcon} alt="" />
+              </div>
+              <div className="receive-chat-text">
+                <p>
+                Hello! I'm your Math Mentor. How can I help you today with your mathematics questions?
+                </p>
+               
+              </div>
+            </div>
+            <div className="send-chat">
+              <div className="send-chat-text">
+                <p>
+                Can you help me understand quadratic equations?
+                </p>
+              
+              </div>
+              <div className="chat-icon">
+                <img src={SendChatUser} alt="" />
+              </div>
+            </div>
+            {/* <div className="receive-chat">
               <div className="chat-icon">
                 <img src={ReceiveChatIcon} alt="" />
               </div>
@@ -79,43 +87,9 @@ const ChatBox = () => {
               <div className="chat-icon">
                 <img src={SendChatUser} alt="" />
               </div>
-            </div>
-            <div className="receive-chat">
-              <div className="chat-icon">
-                <img src={ReceiveChatIcon} alt="" />
-              </div>
-              <div className="receive-chat-text">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Sapiente, itaque.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda odio pariatur consequuntur modi! Quo eligendi itaque
-                  pariatur numquam soluta, assumenda doloremque dolores iusto
-                  saepe magnam atque placeat voluptas quisquam ut!
-                </p>
-              </div>
-            </div>
-            <div className="send-chat">
-              <div className="send-chat-text">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque quis dolorum incidunt laborum ipsum dolor officiis?
-                  Expedita at molestiae repudiandae.
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
-                  maiores aspernatur, totam voluptatum consequatur vitae fuga
-                  dolor accusamus sequi quod porro dicta quibusdam aliquid sint
-                  ratione error similique magnam animi?
-                </p>
-              </div>
-              <div className="chat-icon">
-                <img src={SendChatUser} alt="" />
-              </div>
-            </div>
+            </div> */}
           </div>
+          <div className="chat-editor-content-block">
           <div className="chat-editor-block">
             <div className="chat-input-editor">
             <input type="text" name="name"/>
@@ -138,6 +112,7 @@ const ChatBox = () => {
                 </svg>{" "}
               </PrimaryButton>
             </div>
+          </div>
           </div>
         </div>
       </div>

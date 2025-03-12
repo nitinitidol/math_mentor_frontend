@@ -4,8 +4,52 @@
     padding: 0px 80px;
     border-bottom: 1px solid $border_light_color;
     background-color: $White_color;
+    @include tablet_up{
+        padding: 0px 16px;
+    }
+    @include tablet{
+        padding: 0px 16px;
+    }
+    @include large_mobile{
+        padding: 0px 16px;
+    }
+    @include small_mobile{
+        padding: 0px 16px;
+    }
     .navbar{
         padding: 10.5px 0px;
+        // .navbar-collapse{
+        //     @include tablet{
+        //         position: absolute;
+        //         bottom: -45px;
+        //         right: 0px;
+        //         padding: 10px;
+        //         background-color: $White_color;
+        //         border-radius: 6px;
+        //         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        //         border: 1px solid $input_border-color;
+        //     }
+        //     @include large_mobile{
+        //         position: absolute;
+        //         bottom: -45px;
+        //         right: 0px;
+        //         padding: 10px;
+        //         background-color: $White_color;
+        //         border-radius: 6px;
+        //         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        //         border: 1px solid $input_border-color;
+        //     }
+        //     @include small_mobile{
+        //         position: absolute;
+        //         bottom: -45px;
+        //         right: 0px;
+        //         padding: 10px;
+        //         background-color: $White_color;
+        //         border-radius: 6px;
+        //         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        //         border: 1px solid $input_border-color;
+        //     }
+        // }
     }
     .top-right-menu {
         margin-left: auto;
@@ -58,6 +102,15 @@
                     font-weight: 500;
                     color: $primary_text_color;
                     font-family: $font_family_body;
+                    @include tablet{
+                        display: none;
+                    }
+                    @include large_mobile{
+                        display: none;
+                    }
+                    @include small_mobile{
+                        display: none;
+                    }
                 }
             }
         }

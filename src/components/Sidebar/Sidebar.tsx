@@ -1,5 +1,6 @@
 import React from "react";
 import "../Sidebar/Sidebar.scss";
+import HeaderLogo from "../../assets/images/logo/header-logo.svg";
 import {
   List,
   ListItem,
@@ -7,6 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -19,17 +21,17 @@ const Sidebar = () => {
           id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel"
         >
-          {/* <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-              Off
-            </h5>
+          <div className="offcanvas-header">
+            <Link className="navbar-brand" to="/">
+              <img src={HeaderLogo} alt="HeaderLogo" />
+            </Link>
             <button
               type="button"
               className="btn-close text-reset"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
-          </div> */}
+          </div>
           <div className="offcanvas-body">
             <div className="sidebar-menu">
               <List>
@@ -49,7 +51,7 @@ const Sidebar = () => {
                         />
                       </svg>
                     </ListItemIcon>
-                    <ListItemText primary="Inbox" />
+                    <ListItemText primary="Dashbaord" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -68,7 +70,7 @@ const Sidebar = () => {
                         />
                       </svg>
                     </ListItemIcon>
-                    <ListItemText primary="Inbox" />
+                    <ListItemText primary="Chat" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -87,7 +89,7 @@ const Sidebar = () => {
                         />
                       </svg>
                     </ListItemIcon>
-                    <ListItemText primary="Inbox" />
+                    <ListItemText primary="Learning" />
                   </ListItemButton>
                 </ListItem>
               </List>

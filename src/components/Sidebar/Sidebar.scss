@@ -10,6 +10,36 @@
         @include desktop_up{
             position: static;
         }
+        @include tablet_up{
+            position: static;
+        }
+        @include tablet{
+            position: fixed;
+            width: 250px;
+        }
+        @include large_mobile{
+            position: fixed;
+            width: 250px;
+        }
+        @include small_mobile{
+            position: fixed;
+            width: 250px;
+        }
+        .offcanvas-header{
+            display: none;
+            // @include tablet_up{
+            //     display: block;
+            // }
+            @include tablet{
+                display: block;
+            }
+            @include large_mobile{
+                display: block;
+            }
+            @include small_mobile{
+                display: block;
+            }
+        }
     }
     .offcanvas-body{
         .sidebar-menu{
@@ -32,6 +62,12 @@
                         }
                         .MuiListItemText-root{
                             @include desktop_up{
+                                display: none;
+                            }
+                            @include desktop{
+                                display: none;
+                            }
+                            @include tablet_up{
                                 display: none;
                             }
                         }

@@ -1,12 +1,20 @@
 @import "../../assets/css/variable/variable";
 
-.chat-history-wrapper{
+.chat-history-wrapper {
     padding: 32px 24px;
     background-color: $White_color;
     width: 100%;
+    height: calc(100vh - 80px);
     max-width: 306px;
-    .chat-history-header{
-        .new-chat-btn{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .chat-history-header {
+        padding-bottom: 30px;
+        // background-color: brown;
+        .new-chat-btn {
             border-radius: 4px;
             background-color: $White_color;
             border: 1px solid $primary_color;
@@ -24,11 +32,14 @@
             color: $primary_color;
         }
     }
-    .chat-history-list{
-        height: 450px;
+
+    .chat-history-list {
+        height: 350px;
         overflow-y: auto;
+        // background-color: yellow;
+        // margin-bottom: 300px;
         // padding-top: 40px;
-        .chat-history-lable{
+        .chat-history-lable {
             font-size: 12px;
             font-weight: 500;
             line-height: 16px;
@@ -37,18 +48,23 @@
             margin-bottom: 16px;
             margin-top: 40px;
         }
-        .history-list{
-            padding: 0px ;
-            .MuiListItem-root{
+
+        .history-list {
+            padding: 0px;
+
+            .MuiListItem-root {
                 border-radius: 4px;
-                .MuiListItemButton-root{
+
+                .MuiListItemButton-root {
                     border-radius: 4px;
                     padding: 0px 4px;
-                    &:hover{
+
+                    &:hover {
                         background-color: transparent;
                     }
-                    .MuiListItemText-root{
-                        .MuiTypography-root{
+
+                    .MuiListItemText-root {
+                        .MuiTypography-root {
                             font-size: 14px;
                             font-weight: 400;
                             color: $secondary_text_color;
@@ -56,19 +72,91 @@
                         }
                     }
                 }
-                .MuiListItemSecondaryAction-root{
-                    .MuiIconButton-root{
+
+                .MuiListItemSecondaryAction-root {
+                    .MuiIconButton-root {
                         min-width: 30px;
                     }
                 }
-                &:hover{
+
+                &:hover {
                     background-color: #F6F8FA;
-                    .MuiListItemButton-root{
+
+                    .MuiListItemButton-root {
                         background-color: #F6F8FA;
                     }
-                    .MuiListItemSecondaryAction-root{
+
+                    .MuiListItemSecondaryAction-root {
                         background-color: #F6F8FA;
-                       
+
+                    }
+                }
+            }
+        }
+    }
+
+    .chat-history-footer {
+        // background-color: green;
+        padding: 30px 0px 0px 0px;
+        // position: fixed;
+        // bottom: 0px;
+        // width: auto;
+        .token-upgread-block {
+            border-radius: 16px;
+            background-color: $light_blue_hover;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .token-badge{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                background-color: $White_color;
+                padding: 12px;
+                border-radius: 8px;
+                .token-badge-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+    
+                    span {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        color: $primary_color;
+                        font-family: $font_family_body;
+                    }
+                }
+    
+                .token-badge-value {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    color: $error_color;
+                    font-family: $font_family_body;
+                }
+            }
+        }
+    }
+}
+
+.moremenu-popup{
+    .MuiPaper-root{
+        border-radius: 8px;
+        .MuiMenu-list{
+            .MuiButtonBase-root{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                .moremenu-text{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $secondary_text_color;
+                    font-family: $font_family_body;
+                    &.delete-menu{
+                        color: $error_color;
                     }
                 }
             }
