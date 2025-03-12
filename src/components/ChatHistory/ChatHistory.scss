@@ -4,7 +4,7 @@
     padding: 32px 24px;
     background-color: $White_color;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 85px);
     max-width: 306px;
     position: relative;
     display: flex;
@@ -20,7 +20,7 @@
             border: 1px solid $primary_color;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             gap: 8px;
             height: 48px;
             min-width: 258px;
@@ -134,7 +134,7 @@
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 20px;
-                    color: $error_color;
+                    color: $primary_color;
                     font-family: $font_family_body;
                 }
             }

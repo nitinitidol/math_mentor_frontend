@@ -50,6 +50,14 @@
         //         border: 1px solid $input_border-color;
         //     }
         // }
+        .navbar-brand{
+            img{
+                @include small_mobile {
+                    width: 110px;
+                }
+
+            }
+        }
     }
     .top-right-menu {
         margin-left: auto;
@@ -80,7 +88,9 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            min-width: 172px;
+            // width: 100%;
+            // max-width: 172px;
+            min-width: 32px;
             text-transform: capitalize;
             font-size: 14px;
             font-weight: 500;
@@ -97,21 +107,45 @@
                     border-radius: 4px;
                 }
 
-                .login-user-name {
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $primary_text_color;
-                    font-family: $font_family_body;
-                    @include tablet{
-                        display: none;
-                    }
-                    @include large_mobile{
-                        display: none;
-                    }
-                    @include small_mobile{
-                        display: none;
-                    }
+               
+            }
+            .login-user-name {
+                font-size: 14px;
+                font-weight: 500;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+                @include tablet{
+                    display: none;
                 }
+                @include large_mobile{
+                    display: none;
+                }
+                @include small_mobile{
+                    display: none;
+                }
+            }
+            .down-arrow{
+                @include tablet{
+                    display: none;
+                }
+                @include large_mobile{
+                    display: none;
+                }
+                @include small_mobile{
+                    display: none;
+                }
+            }
+        }
+        .sidebar-toggle-btn{
+            display: none;
+            @include tablet {
+                display: block;
+            }
+            @include large_mobile {
+                display: block;
+            }
+            @include small_mobile {
+                display: block;
             }
         }
     }

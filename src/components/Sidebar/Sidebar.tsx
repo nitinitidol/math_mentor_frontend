@@ -25,12 +25,12 @@ const Sidebar = () => {
             <Link className="navbar-brand" to="/">
               <img src={HeaderLogo} alt="HeaderLogo" />
             </Link>
-            <button
+            {/* <button
               type="button"
               className="btn-close text-reset"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
-            ></button>
+            ></button> */}
           </div>
           <div className="offcanvas-body">
             <div className="sidebar-menu">
