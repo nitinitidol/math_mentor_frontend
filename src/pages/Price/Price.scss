@@ -1,0 +1,122 @@
+@import "../../assets/css/variable/variable";
+
+.price-wrapper{
+    background-color: $light_bg_color;
+    width: 100%;
+    // height: calc(100% - 85px);
+    .price-head-content{
+        padding: 24px;
+        width: 100%;
+        max-width: 844px;
+        margin: auto;
+        .head-content-title{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: center;
+            color: $primary_color;
+            font-family: $font_family_body;
+        }
+        .head-content-dsc-text{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            text-align: center;
+            color: $secondary_text_color;
+            font-family: $font_family_body;
+            margin: 0px;
+        }
+    }
+
+    .price-plan-card-wrap{
+        padding: 24px;
+        width: 100%;
+        max-width: 844px;
+        margin: auto;
+        .price-plan-card{
+            border: 1px solid $input_border-color;
+            border-radius: 24px;
+            padding: 30px;
+            .price-card{
+                width: 100%;
+                max-width: 310px;
+                margin: auto;
+                text-align: center;
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                .plan-card-title{
+                    font-size: 30px;
+                    font-weight: 700;
+                    color: $primary_color;
+                    font-family: $font_family_body;
+                    text-align: center;
+    
+                }
+                .plan-card-dsc{
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: $secondary_text_color;
+                    font-family: $font_family_body;
+                    text-align: center;
+                }
+                .plan-cate{
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                    .plan-cate-value{
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                    }
+                    .plan-cate-label{
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $secondary_text_color;
+                        font-family: $font_family_body;
+                    }
+                }
+                .plan-summery-list{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 12px;
+                    margin-bottom: 30px;
+                    .summery-list-items{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        .check-list{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .list-items-text{
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $secondary_text_color;
+                            font-family: $font_family_body;
+                        }
+                    }
+                }
+                .price-plan-card-action{
+                    button{
+                        width: 100%;
+                    }
+                    .skip-btn{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $primary_color;
+                        font-family: $font_family_body;
+                        margin-top: 16px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+        }
+    }
+}

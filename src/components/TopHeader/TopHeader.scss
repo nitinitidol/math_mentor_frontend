@@ -18,38 +18,6 @@
     }
     .navbar{
         padding: 10.5px 0px;
-        // .navbar-collapse{
-        //     @include tablet{
-        //         position: absolute;
-        //         bottom: -45px;
-        //         right: 0px;
-        //         padding: 10px;
-        //         background-color: $White_color;
-        //         border-radius: 6px;
-        //         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-        //         border: 1px solid $input_border-color;
-        //     }
-        //     @include large_mobile{
-        //         position: absolute;
-        //         bottom: -45px;
-        //         right: 0px;
-        //         padding: 10px;
-        //         background-color: $White_color;
-        //         border-radius: 6px;
-        //         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-        //         border: 1px solid $input_border-color;
-        //     }
-        //     @include small_mobile{
-        //         position: absolute;
-        //         bottom: -45px;
-        //         right: 0px;
-        //         padding: 10px;
-        //         background-color: $White_color;
-        //         border-radius: 6px;
-        //         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-        //         border: 1px solid $input_border-color;
-        //     }
-        // }
         .navbar-brand{
             img{
                 @include small_mobile {
@@ -88,8 +56,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            // width: 100%;
-            // max-width: 172px;
             min-width: 32px;
             text-transform: capitalize;
             font-size: 14px;
@@ -207,7 +173,6 @@
             display: flex;
             align-items: flex-start;
             gap: 8px;
-            // border-bottom: 1px solid $border_light_color;
             .user-setting-img{
                 width: 44px;
                 min-width: 44px;
