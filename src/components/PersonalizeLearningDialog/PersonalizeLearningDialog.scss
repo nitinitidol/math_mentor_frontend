@@ -1,0 +1,70 @@
+@import "../../assets/css/variable/variable";
+
+
+.personalize-dialog{
+    .MuiDialog-container{
+        .MuiDialog-paper{
+            width: 100%;
+            max-width: 480px;
+            border-radius: 16px;
+            .MuiDialogContent-root{
+                .personalize-dialog-body{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 16px;
+                    // padding: 10px;
+                    .personalize-icon{
+                        width: 80px;
+                        min-width: 80px;
+                        height: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: $light_blue_hover;
+                    }
+                    .personalize-dialog-title{
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: $primary_text_color;
+                        line-height: 30px;
+                        font-family: $font_family_body;
+                        text-align: center;
+                    }
+                    .personalize-dialog-dsc{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $secondary_text_color;
+                        line-height: 25px;
+                        font-family: $font_family_body;
+                        text-align: center;
+                    }
+                    .personalize-action-btn{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 16px;
+                        width: 100%;
+                        button{
+                            width: 100%;
+                        }
+                    }
+                    .time-note{
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $secondary_text_color;
+                        font-family: $font_family_body;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

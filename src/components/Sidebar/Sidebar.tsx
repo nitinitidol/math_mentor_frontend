@@ -9,32 +9,16 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-
-const Sidebar = () => {
+interface MenuProps {
+  isMenuOpen: boolean;
+  onMenuToggle: () => void;
+}
+const Sidebar: React.FC<MenuProps> = ({ isMenuOpen, onMenuToggle }) => {
   return (
     <>
       <div className="sidebar-wrapper">
-        <div
-          className="offcanvas offcanvas-start show"
-          tabIndex={-1}
-          data-bs-backdrop="false"
-          id="offcanvasExample"
-          aria-labelledby="offcanvasExampleLabel"
-        >
-          <div className="offcanvas-header">
-            <Link className="navbar-brand" to="/">
-              <img src={HeaderLogo} alt="HeaderLogo" />
-            </Link>
-            {/* <button
-              type="button"
-              className="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button> */}
-          </div>
-          <div className="offcanvas-body">
-            <div className="sidebar-menu">
-              <List>
+        <div className={`sidebar-menu${isMenuOpen ? " open" : ""}`}>
+          <List>
                 <ListItem disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
@@ -93,8 +77,6 @@ const Sidebar = () => {
                   </ListItemButton>
                 </ListItem>
               </List>
-            </div>
-          </div>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import "../Dashboard/Dashboard.scss";
 import TopHeader from '../../components/TopHeader/TopHeader'
 import Sidebar from '../../components/Sidebar/Sidebar';
@@ -7,12 +7,17 @@ import ChatHistory from '../../components/ChatHistory/ChatHistory';
 import ChatBox from '../../components/ChatBox/ChatBox';
 
 const Dashboard = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prevState => !prevState);
+  }, []);
   return (
     <>
     <div className="dashboard-wrapper">
-        <TopHeader/>
+        <TopHeader onMenuToggle={toggleMenu}/>
         <div className="dashboard-main-content-wrap">
-            <Sidebar/>
+            <Sidebar isMenuOpen={isMenuOpen} onMenuToggle={toggleMenu}/>
             <div className='chat-content-wrapper'>
                 <ChatHistory/>
 

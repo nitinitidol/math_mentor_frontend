@@ -5,6 +5,8 @@ import ReceiveChatIcon from "../../assets/images/vactor/receive-chat-icon.svg";
 import SendChatUser from "../../assets/images/vactor/Avatar1.svg";
 import ChatBotIcon from "../../assets/images/vactor/chat-bot-icon.svg";
 import StarIcon from "../../assets/images/vactor/star-icon.svg";
+import ImageIcon from "../../assets/images/vactor/image-icon.svg";
+import VoiceIcon from "../../assets/images/vactor/voice-icon.svg";
 import { Button } from "@mui/material";
 
 const ChatBox = () => {
@@ -61,17 +63,29 @@ const ChatBox = () => {
                 Congratulations, Clifton Treutel!
               </div>
               <div className="welcome-subtext">
-                Congratulations, Clifton Treutel!
+                Welcome to YULI! How can we help you today?
               </div>
             </div>
           </div>
           <div className="chat-editor-content-block">
             <div className="chat-editor-block">
               <div className="chat-input-editor">
-                <input type="text" name="name" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Start your learning journeey with YULI..."
+                />
               </div>
               <div className="chat-editor-menu">
-                <div className="editor-menu-block"> img voice</div>
+                <div className="editor-menu-block">
+                  <label className="upload-img-btn" htmlFor="ImgBtn">
+                    <img src={ImageIcon} alt="" />
+                    <input type="file" id="ImgBtn" name="image" hidden />
+                  </label>
+                  <Button className="voice-btn">
+                    <img src={VoiceIcon} alt="" />
+                  </Button>
+                </div>
                 <PrimaryButton className="send-btn">
                   Send{" "}
                   <svg
@@ -91,17 +105,18 @@ const ChatBox = () => {
             </div>
 
             <div className="chating-tools-block">
-                <div className="suggestion-block">
-                  <Button className="suggestion-btn"> 
-                    {/* <img src={StarIcon} alt="" /> */}
-                     Try Suggestions</Button>
-                </div>
-                <div className="tools-list">
-                    <Button variant="text">Math</Button>
-                    <Button variant="text">Physics</Button>
-                    <Button variant="text">Chemistry</Button>
-                    <Button variant="text">Biology</Button>
-                </div>
+              <div className="suggestion-block">
+                <Button className="suggestion-btn">
+                  {/* <img src={StarIcon} alt="" /> */}
+                  Try Suggestions
+                </Button>
+              </div>
+              <div className="tools-list">
+                <Button variant="text">Math</Button>
+                <Button variant="text">Physics</Button>
+                <Button variant="text">Chemistry</Button>
+                <Button variant="text">Biology</Button>
+              </div>
             </div>
           </div>
         </div>

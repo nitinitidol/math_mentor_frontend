@@ -9,8 +9,10 @@ import UserIcon from "../../assets/images/vactor/user-icon.svg";
 import Compass from "../../assets/images/vactor/compass.svg";
 import Setting from "../../assets/images/vactor/setting.svg";
 import { Button, Divider, Menu, MenuItem } from "@mui/material";
-
-const TopHeader = () => {
+interface HeaderProps {
+  onMenuToggle: () => void;
+}
+const TopHeader : React.FC<HeaderProps> = ({ onMenuToggle }) => {
   const [notify, setNotify] = React.useState<null | HTMLElement>(null);
   const openNotify = Boolean(notify); // Renamed the variable here
   const handleClickNotify = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -28,6 +30,8 @@ const TopHeader = () => {
   const handleClose = () => {
     setMenu(null);
   };
+
+
   return (
     <>
       <header className="top-header-section sticky-top">
@@ -36,23 +40,6 @@ const TopHeader = () => {
             <Link className="navbar-brand" to="/">
               <img src={HeaderLogo} alt="HeaderLogo" />
             </Link>
-
-            {/* <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button> */}
-            {/* <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            > */}
-            {/* <div></div> */}
             <div className="top-right-menu">
               <Button
                 className="notification-badge"
@@ -272,13 +259,9 @@ const TopHeader = () => {
                 </MenuItem>
               </Menu>
 
-                {/* sidebar toggle button  */}
-              <Link
+              <Button
               className="sidebar-toggle-btn"
-                to="#offcanvasExample"
-                data-bs-toggle="offcanvas"
-                role="button"
-                aria-controls="offcanvasExample"
+              onClick={onMenuToggle}
               >
                 <svg
                   width="25"
@@ -292,9 +275,8 @@ const TopHeader = () => {
                     fill="#0A0D14"
                   />
                 </svg>
-              </Link>
+              </Button>
             </div>
-            {/* </div> */}
           </div>
         </nav>
       </header>
