@@ -1,0 +1,184 @@
+@import "../../assets/css/variable/variable";
+
+
+.congratulations-dialog{
+    .MuiDialog-container{
+        .MuiDialog-paper{
+            width: 100%;
+            max-width: 600px;
+            border-radius: 16px;
+            .MuiDialogContent-root{
+                .congratulations-dialog-body{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 16px;
+                    .personalize-icon{
+                        width: 80px;
+                        min-width: 80px;
+                        height: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: $light_blue_hover;
+                        @include small_mobile {
+                            width: 50px;
+                            min-width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    .personalize-dialog-title{
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: $primary_text_color;
+                        line-height: 30px;
+                        font-family: $font_family_body;
+                        text-align: center;
+                    }
+                    .personalize-dialog-dsc{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $secondary_text_color;
+                        line-height: 25px;
+                        font-family: $font_family_body;
+                        text-align: center;
+                    }
+                    .congratulations-action-btn{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        width: 100%;
+                        @include small_mobile {
+                            flex-wrap: wrap;
+                        }
+                        button{
+                            width: 100%;
+                        }
+                    }
+                   .overall-score-block{
+                    padding: 24px;
+                    background-color: $light_bg_color;
+                    border-radius: 12px;
+                    width: 100%;
+                    .overall-score-level{
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 16px;
+                        @include small_mobile {
+                            flex-wrap: wrap;
+                        }
+                        .overall-score{
+                            .overall-score-label{
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 18px;
+                                color: $primary_text_color;
+                                font-family: $font_family_body;
+                            }
+                            .overall-score-value{
+                                font-size: 30px;
+                                font-weight: 700;
+                                color: $primary_color;
+                                font-family: $font_family_body;
+                                margin-top: 8px;
+                            }
+                        }
+                        .proficiency-level{
+                            .proficiency-level-label{
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 18px;
+                                color: $primary_text_color;
+                            }
+                            .proficiency-level-value{
+                                background-color: $border_light_color;
+                                border-radius: 24px;
+                                padding: 3px 20px;
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: $primary_color;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                   }
+                   .overall-score-level-progress{
+                    padding: 24px 0px;
+                   }
+                   .correct-answers{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: $White_color;
+                    padding: 16px;
+                    border-radius: 8px;
+                    .answers-label{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $secondary_text_color;
+                        font-family: $font_family_body;
+                        // margin-bottom: 8px;
+                    }
+                    .answers-value{
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                    }
+                   }
+                   .areas-focus-block{
+                    width: 100%;
+                    margin-bottom: 16px;
+                    .areas-focus-block-title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $primary_text_color;
+                        margin-bottom: 16px;
+                        font-family: $font_family_body;
+                    }
+                    .areas-focus-list{
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        flex-wrap: wrap;
+                        .grammar{
+                            background-color: #DBEAFE;
+                            color: #1D4ED8;
+                            padding: 2px 12px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            border-radius: 30px;
+                            text-align: center;
+                            font-family: $font_family_body;
+                        }
+                        .vocabulary{
+                            background-color: #EDE9FE;
+                            color: #6D28D9;
+                            padding: 2px 12px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            border-radius: 30px;
+                            text-align: center;
+                            font-family: $font_family_body;
+                        }
+                        .reading{
+                            background-color: #FCE7F3;
+                            color: #BE185D;
+                            padding: 2px 12px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            border-radius: 30px;
+                            text-align: center;
+                            font-family: $font_family_body;
+                        }
+                    }
+                   }
+                }
+            }
+        }
+    }
+}

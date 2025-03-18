@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Price from "./pages/Price/Price";
+import ExerciseTest from "./pages/ExerciseTest/ExerciseTest";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/price" element={<Price />} />
+          <Route path="/test" element={<ExerciseTest />} />
         </Routes>
       </BrowserRouter>
     </>
