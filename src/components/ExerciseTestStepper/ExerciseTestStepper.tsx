@@ -90,7 +90,6 @@ const ExerciseTestStepper: React.FC = () => {
                       </FormLabel>
                       <RadioGroup
                         aria-labelledby="question-label-1"
-                        // defaultValue="female"
                         name="radio-buttons-group"
                       >
                         <FormControlLabel
@@ -174,7 +173,6 @@ const ExerciseTestStepper: React.FC = () => {
                       </FormLabel>
                       <RadioGroup
                         aria-labelledby="question-label-1"
-                        // defaultValue="female"
                         name="radio-buttons-group"
                       >
                         <FormControlLabel
@@ -258,7 +256,6 @@ const ExerciseTestStepper: React.FC = () => {
                       </FormLabel>
                       <RadioGroup
                         aria-labelledby="question-label-3"
-                        // defaultValue="female"
                         name="radio-buttons-group"
                       >
                         <FormControlLabel
