@@ -15,22 +15,34 @@ const ChatBox = () => {
       <div className="chatbox-wrapper">
         <div className="chating-block welcome-chating-block">
           <div className="chating-history-block">
-            <div className="chating-history-list d-none">
+            <div className="chating-history-list ">
               <div className="receive-chat">
                 <div className="chat-icon">
                   <img src={ReceiveChatIcon} alt="" />
                 </div>
-                <div className="receive-chat-text">
-                  <p>
-                    Hello! I'm your YULI. How can I help you today with your
-                    mathematics questions?
-                  </p>
+                <div className="receive-chat-text-block">
+                  <div className="receive-chat-text">
+                    <p>
+                      Hello! I'm your YULI. How can I help you today with your
+                      mathematics questions?
+                    </p>
+                  </div>
+                  <div className="chating-text-actions">
+                    <Button>Get Started</Button>
+                    <Button>View Topics</Button>
+                  </div>
                 </div>
               </div>
               <div className="send-chat">
+              <div className="send-chat-text-block">
                 <div className="send-chat-text">
                   <p>Can you help me understand quadratic equations?</p>
                 </div>
+                <div className="chating-text-actions">
+                    <Button>Get Started</Button>
+                    <Button>View Topics</Button>
+                  </div>
+              </div>
                 <div className="chat-icon">
                   <img src={SendChatUser} alt="" />
                 </div>
@@ -55,7 +67,7 @@ const ChatBox = () => {
                 </div>
               </div>
             </div>
-            <div className="welcome-chat-box">
+            <div className="welcome-chat-box d-none">
               <div className="welcome-chat-icon">
                 <img src={ChatBotIcon} alt="" />
               </div>

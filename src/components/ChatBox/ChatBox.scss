@@ -44,31 +44,53 @@
                         height: 32px;
                         border-radius: 50px;
                     }
-                    .receive-chat-text{
-                        width: 100%;
-                        background-color: $White_color;
-                        padding: 16px;
-                        border-radius: 0px 8px 8px 8px;
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: $primary_text_color;
-                        font-family: $font_family_body;
-                        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-                        @include tablet_up{
-                            font-size: 12px;
-                            padding: 10px;
+                    .receive-chat-text-block{
+                        .receive-chat-text{
+                            width: 100%;
+                            background-color: $White_color;
+                            padding: 16px;
+                            border-radius: 0px 8px 8px 8px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $primary_text_color;
+                            font-family: $font_family_body;
+                            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+                            p{
+                                margin-bottom: 0px;
+                            }
+                            @include tablet_up{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
+                            @include tablet{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
+                            @include large_mobile{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
+                            @include small_mobile{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
                         }
-                        @include tablet{
-                            font-size: 12px;
-                            padding: 10px;
-                        }
-                        @include large_mobile{
-                            font-size: 12px;
-                            padding: 10px;
-                        }
-                        @include small_mobile{
-                            font-size: 12px;
-                            padding: 10px;
+                        .chating-text-actions{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-top: 8px;
+                            button{
+                                font-size: 14px;
+                                font-weight: 400;
+                                text-align: center;
+                                color: $secondary_text_color;
+                                background-color: $input_border-color;
+                                border-radius: 50px;
+                                text-transform: capitalize;
+                                height: 28px;
+                                padding: 6px 16px;
+                            }
                         }
                     }
                 }
@@ -84,30 +106,55 @@
                         border-radius: 50px;
                         overflow: hidden;
                     }
-                    .send-chat-text{
-                        background-color: $light_blue_hover;
-                        padding: 16px;
-                        border-radius: 8px 8px 0px 8px;
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: $primary_text_color;
-                        font-family: $font_family_body;
-                        width: 100%;
-                        @include tablet_up{
-                            font-size: 12px;
-                            padding: 10px;
+                    .send-chat-text-block{      
+                        .send-chat-text{
+                            background-color: $light_blue_hover;
+                            padding: 16px;
+                            border-radius: 8px 8px 0px 8px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $primary_text_color;
+                            font-family: $font_family_body;
+                            width: 100%;
+                            p{
+                                margin-bottom: 0px;
+                            }
+                            .chating-text-actions{
+    
+                            }
+                            @include tablet_up{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
+                            @include tablet{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
+                            @include large_mobile{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
+                            @include small_mobile{
+                                font-size: 12px;
+                                padding: 10px;
+                            }
                         }
-                        @include tablet{
-                            font-size: 12px;
-                            padding: 10px;
-                        }
-                        @include large_mobile{
-                            font-size: 12px;
-                            padding: 10px;
-                        }
-                        @include small_mobile{
-                            font-size: 12px;
-                            padding: 10px;
+                        .chating-text-actions{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-top: 8px;
+                            button{
+                                font-size: 14px;
+                                font-weight: 400;
+                                text-align: center;
+                                color: $secondary_text_color;
+                                background-color: $input_border-color;
+                                border-radius: 50px;
+                                text-transform: capitalize;
+                                height: 28px;
+                                padding: 6px 16px;
+                            }
                         }
                     }
                 }
