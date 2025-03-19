@@ -1,22 +1,30 @@
 import axios from "axios";
 import { baseUrl } from "../Utils/Config/config";
 
-// const token = localStorage.getItem("token") ; 
 const server = axios.create({
-    baseURL: baseUrl,
-  });
+  baseURL: baseUrl,
+});
 
-  server.interceptors.request.use(
-    (request) => {
-      request.headers["Authorization"] = token ? "Bearer " + token : "";
-      return request;
-    },
-    (error) => {
-      if (error.response && error.response.status === 401) {
-        console.log("Authorization Failed");
-      }
-      return Promise.reject(error);
+server.interceptors.request.use(
+  (request) => {
+    const token = localStorage.getItem("auth-token");
+    request.headers["Authorization"] = token ? `Bearer ${token}` : "";
+    return request;
+  },
+  (error) => Promise.reject(error)
+);
+
+server.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      console.log("Authorization Failed");
+
+      localStorage.removeItem("auth-token");
+      window.location.href = "/login";
     }
-  );
-  
-  export default server;
+    return Promise.reject(error);
+  }
+);
+
+export default server;

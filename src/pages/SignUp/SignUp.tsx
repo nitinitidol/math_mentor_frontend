@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import "../SignUp/SignUp.scss";
 import Banner1 from "../../assets/images/banner/auth-banner.svg";
 import Auth_Logo from "../../assets/images/logo/logo.svg";
@@ -184,7 +184,7 @@ const SignUp = () => {
                       </PrimaryButton>
                   </div>
                   <div className="auth-info-text">
-                  Already have an account? <Link className="auth-link" to="/">Sign in</Link>
+                  Already have an account? <Link className="auth-link" to="/sign-in">Sign in</Link>
                   </div>
                 </form>
               </div>
