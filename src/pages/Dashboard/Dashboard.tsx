@@ -7,6 +7,7 @@ import ChatHistory from '../../components/ChatHistory/ChatHistory';
 import ChatBox from '../../components/ChatBox/ChatBox';
 import TestResult from '../../components/TestResult/TestResult';
 import CourseList from '../../components/CourseList/CourseList';
+import EnrolledCourses from '../../components/EnrolledCourses/EnrolledCourses';
 
 const Dashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -21,12 +22,14 @@ const Dashboard = () => {
         <div className="dashboard-main-content-wrap">
             <Sidebar isMenuOpen={isMenuOpen} onMenuToggle={toggleMenu}/>
             <div className='chat-content-wrapper'>
-                <ChatHistory/>
-                <ChatBox/>
+                {/* <ChatHistory/>
+                <ChatBox/> */}
 
                 {/* <TestResult/> */}
 
                 {/* <CourseList/> */}
+
+                <EnrolledCourses/>
             </div>
         </div>
     </div>

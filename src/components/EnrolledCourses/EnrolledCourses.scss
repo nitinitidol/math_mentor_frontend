@@ -1,0 +1,138 @@
+@import "../../assets/css/variable/variable";
+
+.courses-wrapper{
+    padding: 40px 24px;
+    width: 100%;
+    .courses-header-wrapper{
+        margin-bottom: 40px;
+        .courses-header-title{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            span{
+                font-size: 20px;
+                font-weight: 500;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+            }
+        }
+        .courses-header-dsc{
+            font-size: 16px;
+            font-weight: 400;
+            color: $secondary_text_color;
+            font-family: $font_family_body;
+        }
+    }
+    .courses-content-body-wrapper{
+        .courses-card{
+            border-radius: 16px;
+            border: 1px solid $border_light_color;
+            background-color: $White_color;
+            padding: 24px;
+            .courses-card-head{
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                gap: 16px;
+            }
+            .courses-card-body{
+                &.learn-leasson-body{
+                    height: 100%;
+                    max-height: 280px;
+                    overflow-y: auto;
+                }
+                .courses-card-title{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $primary_text_color;
+                    line-height: 20px;
+                    font-family: $font_family_body;
+                }
+                .courses-card-dsc{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $secondary_text_color;
+                    line-height: 24px;
+                    margin-bottom: 16px;
+                    font-family: $font_family_body;
+                }
+                .coreses-progress{
+                    padding: 16px;
+                    background-color: $light_bg_color;
+                    border-radius: 8px;
+                    .coreses-progress-tracker{
+                        margin-bottom: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        .coreses-progress-value{
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            h3{
+                                font-size: 30px;
+                                font-weight: 700;
+                                color: $primary_color;
+                                font-family: $font_family_body;
+                                margin: 0px;
+                            }
+                            .progress-label{
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: $secondary_text_color;
+                                font-family: $font_family_body;
+                            }
+                        }
+                        .time-duration-label{
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            span{
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: $secondary_text_color;
+                                font-family: $font_family_body;
+                            }
+                        }
+                    }
+
+                }
+                .coreses-card-action{
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 16px;
+                    margin-top: 16px;
+                    &.learn-leasson-action{
+                        justify-content: space-between;
+                        button{
+                            height: 44px;
+                        }
+                    }
+                    button{
+                        height: 44px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.time-duration-label{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    span{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $secondary_text_color;
+        font-family: $font_family_body;
+    }
+}
