@@ -1,0 +1,162 @@
+@import "../../assets/css/variable/variable";
+
+.test-result-wrapper{
+    width: 100%;
+    padding: 40px 16px;
+    .g-32{
+        gap: 32px;
+    }
+    .test-result-header{
+        padding: 0px 0px 40px 0px;
+        .test-result-header-title{
+            font-size: $font_xl;
+            font-weight: $font_medium;
+            color: $primary_text_color;
+            line-height: 16px;
+            font-family: $font_family_body;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .test-result-header-subtitle{
+            font-size: $font_md;
+            font-weight: $font_normal;
+            color: $secondary_text_color;
+            line-height: 16px;
+            font-family: $font_family_body;
+            text-align: center;
+        }
+    }
+}
+
+.result-card{
+    background-color: $White_color;
+    border-radius: 16px;
+    padding: 32px;
+    @include tablet {
+        padding: 16px;
+    }
+    @include small_mobile {
+        padding: 16px;
+    }
+    .card-title{
+        font-size: $font_xl;
+        font-weight: $font_medium;
+        color: $primary_text_color;
+        font-family: $font_family_body;
+    }
+    .card-subtitle{
+        font-size: $font_sm;
+        font-weight: $font_normal;
+        color: $secondary_text_color;
+        font-family: $font_family_body;
+    }
+}
+
+.progress-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    .progress-icon{
+        width: 72px;
+        min-width: 72px;
+        height: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $light_bg_color;
+        border-radius: 100%;
+    }
+}
+.correct-ans-block{
+    background-color: $light_bg_color;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 32px;
+    .correct-ans-number{
+        font-size: 62px;
+        font-weight: $font_bold;
+        color: $primary_color;
+        font-family: $font_family_body;
+    }
+}
+
+.suggestion-card{
+    padding: 16px 20px;
+    @include tablet {
+        padding: 12px;
+    }
+    @include small_mobile {
+        padding: 12px;
+    }
+    .card-title{
+        font-size: $font_md;
+        margin: 12px 0px 16px 0px ;
+    }
+}
+.skill-level-block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    .proficient-text{
+        color: #16A34A;
+        font-size: $font_lg;
+        font-weight: $font_medium;
+        text-align: center;
+        font-family: $font_family_body;
+    }
+}
+
+.learning-continue{
+    background-color: $primary_color;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include tablet {
+        padding: 16px;
+    }
+    @include small_mobile {
+        padding: 16px;
+    }
+    .learning-continue-title{
+        font-size: $font_xl;
+        font-weight: $font_bold;
+        color: $White_color;
+        text-align: center;
+        font-family: $font_family_body;
+    }
+    .learning-continue-subtitle{
+        font-size: $font_md;
+        font-weight: $font_normal;
+        color: $White_color;
+        text-align: center;
+        font-family: $font_family_body;
+    }
+    .start-btn{
+        background-color: $White_color;
+        color: $primary_color;
+        width: 100%;
+        height: 44px;
+    }
+    
+}
+.view-result-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .view-now-btn{
+        border: 1px solid $primary_color;
+        height: 44px;
+        width: 100%;
+    }
+}
