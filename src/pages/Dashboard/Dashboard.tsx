@@ -5,6 +5,8 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import { extendTheme } from '@mui/material/styles';
 import ChatHistory from '../../components/ChatHistory/ChatHistory';
 import ChatBox from '../../components/ChatBox/ChatBox';
+import TestResult from '../../components/TestResult/TestResult';
+import CourseList from '../../components/CourseList/CourseList';
 
 const Dashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -20,8 +22,11 @@ const Dashboard = () => {
             <Sidebar isMenuOpen={isMenuOpen} onMenuToggle={toggleMenu}/>
             <div className='chat-content-wrapper'>
                 <ChatHistory/>
-
                 <ChatBox/>
+
+                {/* <TestResult/> */}
+
+                {/* <CourseList/> */}
             </div>
         </div>
     </div>
