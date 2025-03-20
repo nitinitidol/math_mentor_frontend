@@ -9,17 +9,31 @@ interface LoginPayload {
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (values : LoginPayload, { rejectWithValue }) => {
-    console.log("payload data " , values)
     try {
       const response = await server.post("/auth/login", values , {
         headers : {
           "Content-Type": "application/x-www-form-urlencoded",
         }
       });
-      console.log("response", response);
       return response.data; // Return user data from API response
     } catch (error : any) {
       return rejectWithValue(error.response?.data || "Login failed"); 
     }
   }
 ); 
+
+export const signUpPostCall = createAsyncThunk(
+  "auth/signup",
+  async (user: any, { dispatch, rejectWithValue }) => {
+    try {
+      const response = await server.post("/auth/signup", user , {
+        headers : {
+          "Content-Type" : "application/json", 
+        }
+      });
+      return response.data ;   
+    } catch (error: any) {
+      return rejectWithValue(error.response.data || "Sign up failed ")
+    }
+  }
+);
