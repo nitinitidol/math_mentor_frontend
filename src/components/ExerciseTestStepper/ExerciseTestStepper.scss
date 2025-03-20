@@ -115,6 +115,34 @@
                 padding: 8px;
                 margin: 0px;
                 width: 100%;
+                &.Mui-disabled{
+                    .selected-icon{
+                        width: 42px;
+                        min-width: 42px;
+                        height: 42px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                &.selected-answer{
+                    border: 1px solid #38C793;
+                    .MuiTypography-root{
+                        color: #38C793;
+                        &.Mui-disabled{
+                            color: #38C793;
+                        }
+                    }
+                }
+                &.wrong-answer{
+                    border: 1px solid $error_color;
+                    .MuiTypography-root{
+                        color: $error_color;
+                        &.Mui-disabled{
+                            color: $error_color;
+                        }
+                    }
+                }
                 .MuiRadio-root{
                     &.Mui-checked{
                         color: $primary_color;
@@ -125,6 +153,9 @@
                     font-weight: 400;
                     color: $secondary_text_color;
                     font-family: $font_family_body;
+                    &.Mui-disabled{
+                        color: $disabled_text_color;
+                    }
                 }
             }
         }

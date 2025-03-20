@@ -136,3 +136,272 @@
         font-family: $font_family_body;
     }
 }
+
+.courses-card {
+    &.course-content-card{
+        .course-content-card-title{
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            span{
+                font-size: 20px;
+                font-weight: 700;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+            }
+        }
+        .course-content-card-subtitle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin: 16px 0px;
+            @include small_mobile{
+                flex-wrap: wrap;
+            }
+            .card-subtitle{
+                font-size: 18px;
+                line-height: 18px;
+                font-weight: 600;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+            }
+            .subtitle-notes{
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 400;
+                color: $secondary_text_color;
+                font-family: $font_family_body;
+            }
+        }
+
+        .completed-leasson-list{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+            .leasson-list-items{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding: 12px;
+                background-color: $light_bg_color;
+                border-radius: 8px;
+                border: 1px solid $border_light_color;
+                @include tablet {
+                    flex-wrap: wrap;
+                }
+                @include small_mobile {
+                    flex-wrap: wrap;
+                }
+                .leasson-items-label{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: $primary_text_color;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: $font_family_body;
+                }
+                .leasson-items-duration{
+                    font-family: $font_family_body;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    color: $secondary_text_color;
+                }
+            }
+            &.disabled-list{
+                .leasson-list-items{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+                    padding: 12px;
+                    background-color: $light_bg_color;
+                    border-radius: 8px;
+                    border: 1px solid $border_light_color;
+                    @include tablet {
+                        flex-wrap: wrap;
+                    }
+                    @include small_mobile {
+                        flex-wrap: wrap;
+                    }
+                    .leasson-items-label{
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        color: $disabled_text_color;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: $font_family_body;
+                    }
+                    .leasson-items-duration{
+                        font-family: $font_family_body;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 14px;
+                        color: $disabled_text_color;
+                    }
+                }
+            }
+        }
+
+        .inprogres-lesson-block{
+            padding: 16px;
+            border: 1px solid $border_light_color;
+            border-radius: 8px;
+            background-color: $White_color;
+            .inprogres-lesson-label-head{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                margin-bottom: 12px;
+                @include tablet {
+                    flex-wrap: wrap;
+                }
+                @include small_mobile {
+                    flex-wrap: wrap;
+                }
+                .inprogres-lesson-label{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    span{
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                    }
+                }
+                .inprogres-lesson-timeduration{
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 400;
+                    color: $secondary_text_color;
+                }
+            }
+            .inprogres-progress-bar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                @include tablet {
+                    flex-wrap: wrap;
+                }
+                @include small_mobile {
+                    flex-wrap: wrap;
+                }
+                .overall-score-level-progress{
+                    width: 100%;
+                    max-width: 70%;
+                    @include tablet {
+                        max-width: 100%;
+                    }
+                    @include small_mobile {
+                        max-width: 100%;
+                    }
+                }
+                button{
+                    min-width: 160px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    &.mentor-tips{
+        .mentor-tips-dsc{
+            font-size: 16px;
+            font-weight: 400;
+            color: $secondary_text_color;
+            font-family: $font_family_body;
+        }
+        .mentor-tips-list{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+            .mentor-tips-list-items{
+                display: flex;
+                align-items: baseline;
+                gap: 12px;
+            }
+        }
+    }
+
+    &.quick-status{
+        .quick-status-list{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .quick-status-list-items{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                .quick-status-items-label{
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    color: $secondary_text_color;
+                    font-family: $font_family_body;
+                }
+                .quick-status-items-value{
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 700;
+                    font-family: $font_family_body;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    &.status-yellow{
+                        color: #EAB308;
+                    }
+                    &.status-blue{
+                        color: #3B82F6;
+                    }
+                    &.status-green{
+                        color: #22C55E;
+                    }
+                }
+            }
+        }
+    }
+}
+.courses-card-group{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.review-answer-card{
+    height: 490px;
+    overflow: auto;
+    .question-answer-block{
+        max-width: 896px;
+        .stepper-form-block{
+            background-color: $light_bg_color;
+        }
+        .question-answer-dsc-block{
+            margin: 16px 0px;
+            .question-answer-dsc-title{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 36px;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+            }
+            .answer-dsc{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 26px;
+                color: $secondary_text_color;
+                font-family: $font_family_body;
+            }
+        }
+    }
+}
