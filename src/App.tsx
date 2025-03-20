@@ -6,6 +6,8 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Price from "./pages/Price/Price";
 import ExerciseTest from "./pages/ExerciseTest/ExerciseTest";
+import SendOTP from "./pages/SendOTP/SendOTP";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import { Alert, Snackbar } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "./Store/store";
@@ -20,6 +22,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/send-otp" element={<SendOTP />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/price" element={<Price />} />
           <Route path="/test" element={<ExerciseTest />} />
