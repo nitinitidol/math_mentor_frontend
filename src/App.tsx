@@ -8,8 +8,13 @@ import Price from "./pages/Price/Price";
 import ExerciseTest from "./pages/ExerciseTest/ExerciseTest";
 import SendOTP from "./pages/SendOTP/SendOTP";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import { Alert, Snackbar } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "./Store/store";
+import { closeSnackbar } from "./Slice/snackbarSlice";
+import SnackBar from "./components/Snackbar/Snackbar";
 
-function App() {
+function App() { 
   return (
     <>
       <BrowserRouter>
@@ -24,6 +29,7 @@ function App() {
           <Route path="/test" element={<ExerciseTest />} />
         </Routes>
       </BrowserRouter>
+     <SnackBar />
     </>
   );
 }
