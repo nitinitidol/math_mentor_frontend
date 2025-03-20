@@ -1,34 +1,18 @@
-import React, { useState } from "react";
 import "../Login/Login.scss";
-import Banner1 from "../../assets/images/banner/auth-banner.svg";
-import Auth_Logo from "../../assets/images/logo/logo.svg";
 import Auth_OTP_Logo from "../../assets/images/logo/otp-logo.svg";
-import Eye from "../../assets/images/vactor/eye.svg";
 import EyeLine from "../../assets/images/vactor/eye-line.svg";
 import Right_Arrow from "../../assets/images/vactor/arrow-right.svg";
-import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
+import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { PrimaryButton } from "../../components/AllButtons/AllButtons";
 import { Link } from "react-router-dom";
+import TitleComponent from "../../components/CommonElements/TitleComponent/TitleComponent";
 
 const ResetPassword = () => {
   return (
     <>
       <div className="auth-wrapper">
         <div className="row mx-0 h-100">
-          <div className="col-md-6 p-0">
-            <div className="auth-banner-block">
-              <div className="auth-banner-content">
-              <div className="auth-banner-img">
-                <img src={Banner1} alt="Banner1" />
-                </div>
-                <h4 className="banner-content-title">Master with AI</h4>
-                <p className="banner-content-dsc-text">
-                  Join thousands of students who are transforming their learning
-                  journey with personalized AI assistance.
-                </p>
-              </div>
-            </div>
-          </div>
+          <TitleComponent />
           <div className="col-md-6 p-0">
             <div className="auth-form-block">
               <div className="auth-form-content-block">
@@ -56,7 +40,6 @@ const ResetPassword = () => {
                               aria-label="toggle password visibility"
                               edge="end"
                             >
-                              {/* <img src={Eye} alt="Show password" /> */}
                               <img src={EyeLine} alt="Hide password" />
                             </IconButton>
                           </InputAdornment>

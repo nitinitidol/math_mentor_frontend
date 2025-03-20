@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../SignUp/SignUp.scss";
-import Banner1 from "../../assets/images/banner/auth-banner.svg";
 import Auth_Logo from "../../assets/images/logo/logo.svg";
 import Eye from "../../assets/images/vactor/eye.svg";
 import Right_Arrow from "../../assets/images/vactor/arrow-right.svg";
@@ -17,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { signUpPostCall } from "../../Services/auth.service";
 import { AppDispatch } from "../../Store/store";
 import { openSnackbar } from "../../Slice/snackbarSlice";
+import TitleComponent from "../../components/CommonElements/TitleComponent/TitleComponent";
 
 const selectGrade = [{ label: "Grade1" }, { label: "Grade2" }, { label: "Grade3" }];
 
@@ -85,9 +85,6 @@ const SignUp = () => {
     return match ? parseInt(match[0], 10) : null;
   };
 
-  // State to toggle password visibility
-
-  // Toggle password visibility
   const handleTogglePassword = () => {
     setShowPassword((prev) => !prev);
   };
@@ -100,20 +97,7 @@ const SignUp = () => {
     <>
       <div className="auth-wrapper">
         <div className="row mx-0 h-100">
-          <div className="col-md-6 p-0">
-            <div className="auth-banner-block">
-              <div className="auth-banner-content">
-                <div className="auth-banner-img">
-                  <img src={Banner1} alt="Banner1" />
-                </div>
-                <h4 className="banner-content-title">Master with AI</h4>
-                <p className="banner-content-dsc-text">
-                  Join thousands of students who are transforming their learning journey with personalized AI
-                  assistance.
-                </p>
-              </div>
-            </div>
-          </div>
+          <TitleComponent />
           <div className="col-md-6 p-0">
             <div className="auth-form-block">
               <div className="auth-form-content-block">
@@ -359,7 +343,7 @@ const SignUp = () => {
                   </div>
                   <div className="auth-info-text">
                     Already have an account?{" "}
-                    <Link className="auth-link" to="/">
+                    <Link className="auth-link" to="/login">
                       Sign in
                     </Link>
                   </div>

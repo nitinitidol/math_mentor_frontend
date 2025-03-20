@@ -1,27 +1,22 @@
 import { useState } from "react";
 import "../Login/Login.scss";
-import Banner1 from "../../assets/images/banner/auth-banner.svg";
 import Auth_Logo from "../../assets/images/logo/logo.svg";
 import Eye from "../../assets/images/vactor/eye.svg";
 import EyeLine from "../../assets/images/vactor/eye-line.svg";
 import Right_Arrow from "../../assets/images/vactor/arrow-right.svg";
-import { Alert, IconButton, InputAdornment, Snackbar, TextField } from "@mui/material";
+import {  IconButton, InputAdornment, TextField } from "@mui/material";
 import { PrimaryButton } from "../../components/AllButtons/AllButtons";
 import { Link } from "react-router-dom";
 import { loginUser } from "../../Services/auth.service";
 import { useAppDispatch } from "../../Store/store";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { openSnackbar } from "../../Slice/snackbarSlice";
-
+import TitleComponent from "../../components/CommonElements/TitleComponent/TitleComponent";
 const Login = () => {
   const dispatch = useAppDispatch();
   const [showPassword, setShowPassword] = useState(false);
-  // const [snackbarOpen, setSnackbarOpen] = useState(false);
-  // const [message, setMessage] = useState("");
-  // const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">("success");
 
-  // ✅ Validation Schema for Formik using Yup
   const validationSchema = Yup.object({
     username: Yup.string()
       .email("Invalid email format")
@@ -29,7 +24,7 @@ const Login = () => {
     password: Yup.string().required("Password is required"),
   });
 
-  // ✅ Handle Form Submission
+ 
   const handleSubmit = async (values: { username: string; password: string }) => {
     try {
       const response = await dispatch(loginUser(values)).unwrap();
@@ -49,19 +44,7 @@ const Login = () => {
     <>
       <div className="auth-wrapper">
         <div className="row mx-0 h-100">
-          <div className="col-md-6 p-0">
-            <div className="auth-banner-block">
-              <div className="auth-banner-content">
-                <div className="auth-banner-img">
-                  <img src={Banner1} alt="Banner1" />
-                </div>
-                <h4 className="banner-content-title">Master with AI</h4>
-                <p className="banner-content-dsc-text">
-                  Join thousands of students who are transforming their learning journey with personalized AI assistance.
-                </p>
-              </div>
-            </div>
-          </div>
+          <TitleComponent /> 
           <div className="col-md-6 p-0">
             <div className="auth-form-block">
               <div className="auth-form-content-block">
@@ -69,8 +52,6 @@ const Login = () => {
                   <img src={Auth_Logo} alt="Logo" />
                 </div>
                 <p className="content-dsc-text">Welcome Back!</p>
-
-                {/* ✅ Use Formik for Form Handling */}
                 <Formik
                   initialValues={{ username: "", password: "" }}
                   validationSchema={validationSchema}
