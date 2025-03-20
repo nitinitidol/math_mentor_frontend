@@ -122,6 +122,10 @@
             margin: 0px;
             margin-top: 24px;
             font-family: $font_family_body;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
             .auth-link{
                 color: $primary_color;
                 font-family: $font_family_body;

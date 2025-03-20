@@ -593,3 +593,113 @@ input {
     border-bottom-right-radius: 8px;
   }
 }
+
+
+.course-list-badge{
+  border-radius: 30px;
+  padding: 3px 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $font_family_body;
+  min-width: 84px;
+  display: inline-flex;
+  margin-bottom: 16px;
+  &.beginner-badge{
+      background-color: #DCFCE7;
+      color: #15803D;
+  }
+  &.intermediate-badge{
+      background-color: #FEF9C3;
+      color: #A16207;
+  }
+  &.advance-badge{
+      background-color: #FEE2E2;
+      color: #B91C1C;
+  }
+}
+
+.otp-input-form-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+  .otp-input {
+    border: 1px solid $input_border-color;
+    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    padding: 8px 8px;
+    font-weight: $font_medium;
+    font-size: $font_2xl;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: $font_family_body;
+    @include desktop {
+      width: 45px;
+      height: 50px;
+    }
+    @include tablet_up {
+      width: 45px;
+      height: 50px;
+    }
+    @include tablet {
+      width: 40px;
+      height: 45px;
+    }
+    @include large_mobile {
+      width: 40px;
+      height: 45px;
+    }
+    @include small_mobile {
+      width: 40px;
+      height: 45px;
+    }
+  }
+  .otp_input_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+    .custom_otp_input {
+      border: 1px solid $input_border-color;
+      border-radius: 6px;
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      padding: 8px 8px;
+      font-weight: $font_medium;
+      font-size: $font_2xl;
+      letter-spacing: 1.5px;
+      text-align: center;
+      font-family: $font_family_body;
+      @include desktop {
+        min-width: 45px;
+        width: 45px;
+        height: 45px;
+      }
+      @include tablet_up {
+        min-width: 35px;
+        width: 35px;
+        height: 35px;
+      }
+      @include tablet {
+        min-width: 35px;
+        width: 35px;
+        height: 35px;
+      }
+      @include large_mobile {
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+      }
+      @include small_mobile {
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
