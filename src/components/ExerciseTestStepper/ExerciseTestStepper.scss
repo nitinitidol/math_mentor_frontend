@@ -97,6 +97,9 @@
     background-color: $White_color;
     padding: 32px;
     border-radius: 12px;
+    @include small_mobile {
+        padding: 16px;
+    }
     .MuiFormControl-root{
         width: 100%;
         .stepper-question{

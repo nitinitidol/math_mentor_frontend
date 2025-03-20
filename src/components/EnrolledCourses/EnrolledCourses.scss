@@ -30,6 +30,9 @@
             border: 1px solid $border_light_color;
             background-color: $White_color;
             padding: 24px;
+            @include small_mobile {
+                padding: 16px;
+            }
             .courses-card-head{
                 display: flex;
                 align-items: baseline;
