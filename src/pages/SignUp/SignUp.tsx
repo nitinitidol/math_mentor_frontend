@@ -159,6 +159,7 @@ const SignUp = () => {
                           placeholder="Grade"
                           margin="normal"
                           variant="outlined"
+                          id="grade"
                           fullWidth
                           name="grade"
                           onChange={handleChange}

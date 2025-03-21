@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "../Slice/userSlice"; 
-import snackbarReducer from "../Slice/snackbarSlice" ; 
+import snackbarReducer from "../Slice/snackbarSlice" ;
+import forgotpassReducer from "../Slice/forgotPassSlice" 
 import credentialsReducer from "../Slice/credentialSlice"
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import authReducer from "../Slice/authSlice" ; 
@@ -9,8 +10,9 @@ const store = configureStore({
   reducer: {
     user: userReducer ,
     snackbar : snackbarReducer , 
-    auth : authReducer , 
+    auth : authReducer ,
     credentials : credentialsReducer , 
+    forgotPassword : forgotpassReducer, 
   },
 
 });
