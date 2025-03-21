@@ -19,6 +19,7 @@ export const PrimaryButton = styled(Button)(({ theme }) => ({
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
+    height:"44px",
 
   "@media (max-width: 480px)": {
     width: "100%",
@@ -49,6 +50,7 @@ export const LightButton = styled(Button)(({ theme }) => ({
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
+    height:"44px",
 
   "@media (max-width: 480px)": {
     width: "100%",

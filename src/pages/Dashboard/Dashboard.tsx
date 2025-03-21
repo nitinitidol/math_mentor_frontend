@@ -8,6 +8,7 @@ import ChatBox from '../../components/ChatBox/ChatBox';
 import TestResult from '../../components/TestResult/TestResult';
 import CourseList from '../../components/CourseList/CourseList';
 import EnrolledCourses from '../../components/EnrolledCourses/EnrolledCourses';
+import UserProfile from '../UserProfile/UserProfile';
 
 const Dashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -29,7 +30,9 @@ const Dashboard = () => {
 
                 {/* <CourseList/> */}
 
-                <EnrolledCourses/>
+                {/* <EnrolledCourses/> */}
+
+                <UserProfile/>
             </div>
         </div>
     </div>

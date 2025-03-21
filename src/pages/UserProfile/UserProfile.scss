@@ -1,0 +1,367 @@
+@import "../../assets/css/variable/variable";
+
+.user-profile-wrapper {
+    padding: 32px;
+    width: 100%;
+    height: 100%;
+    .custom-user-card {
+        background-color: $White_color;
+        border-radius: 16px;
+        .custom-user-card-header {
+            padding: 32px;
+            border-bottom: 1px solid $input_border-color;
+            @include small_mobile{
+                padding: 16px;
+            }
+            .user-profile-block {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                .user-img {
+                    width: 80px;
+                    min-width: 80px;
+                    height: 80px;
+                    border-radius: 20px;
+                    position: relative;
+                    @include small_mobile{
+                        width: 36px;
+                        min-width: 36px;
+                        height: 36px;
+                        border-radius: 8px;
+                    }
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 20px;
+                        @include small_mobile{
+                            border-radius: 8px;
+                        }
+                    }
+                    .camera-icon-img {
+                        padding: 5px;
+                        width: 24px;
+                        min-width: 24px;
+                        height: 24px;
+                        background-color: $White_color;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        bottom: -10px;
+                        right: -10px;
+                        box-shadow: 0px 6.25px 9.38px 0px rgba(0, 0, 0, 0.1);
+                        img{
+                            border-radius: 0px;
+                        }
+                    }
+                }
+                .user-info {
+                    .user-name {
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 32px;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                        @include small_mobile{
+                            font-size: 18px;
+                            line-height: 20px;
+                        }
+                    }
+                    .user-grade {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        color: $disabled_text_color;
+                        font-family: $font_family_body;
+                        @include small_mobile{
+                            font-size: 14px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .custom-user-card-body {
+            padding: 32px;
+            @include small_mobile{
+                padding: 16px;
+            }
+            .custom-user-card-body-title {
+                font-size: 20px;
+                font-weight: 500;
+                color: $primary_text_color;
+                font-family: $font_family_body;
+                margin-bottom: 24px;
+            }
+            .profile-details-listing{
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                .details-listing-items{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+                    flex-wrap: wrap;
+                    .details-listing-items-edits{
+                        .details-label{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $secondary_text_color;
+                            font-family: $font_family_body;
+                            margin-bottom: 6px;
+                        }
+                        .input-value-text{
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $primary_text_color;
+                            font-family: $font_family_body;
+                            input{
+                                border: 0px;
+                                padding: 0px;
+                                margin: 0px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: $primary_text_color;
+                                font-family: $font_family_body;
+                                &:focus{
+                                    outline: 0px;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    .details-listing-items-action{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        .input-edit-btn{
+                            min-width: 34px;
+                        }
+                        .input-save-btn{
+                            height: 30px;
+                            font-size: 14px;
+                            min-width: 80px;
+                        }
+                        .input-cancel-btn{
+                            height: 30px;
+                            font-size: 14px;
+                            min-width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .user-custom-card-group{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .custom-user-card {
+            &.plan-card{
+                background-color: $White_color;
+                border-radius: 16px;
+                padding: 32px;
+                @include small_mobile{
+                    padding: 16px;
+                }
+                .plan-card-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 16px;
+                    margin-bottom: 16px;
+                    @include desktop{
+                        flex-wrap: wrap;
+                    }
+                    @include tablet_up{
+                        flex-wrap: wrap;
+                    }
+                    @include small_mobile{
+                        flex-wrap: wrap;
+                    }
+                    .card-title{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                    }
+                    .free-plan-btn{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                        background-color: $input_border-color;
+                        border-radius: 30px;
+                        padding: 4px 10px;
+                        height: 33px;
+                        text-transform: capitalize;
+                    }
+                }
+                .plan-card-body{
+                    .plan-details-list{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        .plan-details-list-title{
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $primary_text_color;
+                            font-family: $font_family_body;
+                            // margin-bottom: 16px;
+                        }
+                        .plan-details-list-items{
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            .details-list-items-text{
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: $secondary_text_color;
+                                font-family: $font_family_body;
+                            }
+                        }
+                    }
+                    .plan-card-action{
+                        button{
+                            width: 100%;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+
+            &.setting-card{
+                background-color: $White_color;
+                border-radius: 16px;
+                padding: 32px;
+                .plan-card-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+                    margin-bottom: 16px;
+                    .card-title{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                    }
+                    .free-plan-btn{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $primary_text_color;
+                        font-family: $font_family_body;
+                        background-color: $input_border-color;
+                        border-radius: 30px;
+                        padding: 4px 10px;
+                        height: 33px;
+                        text-transform: capitalize;
+                    }
+                }
+                .setting-card-body{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $primary_text_color;
+                        background-color: transparent;
+                        width: 100%;
+                        font-family: $font_family_body;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                    .notification-control-field{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $primary_text_color;
+                        background-color: transparent;
+                        width: 100%;
+                        font-family: $font_family_body;
+                    }
+                    .sign-out-btn{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $error_color;
+                        background-color: #FEF2F2;
+                        width: 100%;
+                        font-family: $font_family_body;
+                        border-radius: 8px;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                .change-password-body{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    .change-password-action{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        padding-top: 8px;
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+                .successfully-reset-body{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 24px;
+                    .successfully-reset-icon{
+                        width: 60px;
+                        min-width: 60px;
+                        height: 60px;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #D1FAE5;
+                    }
+                    .successfully-dsc-block{
+                        .successfully-title{
+                            font-size: 20px;
+                            font-weight: 500;
+                            text-align: center;
+                            color: $primary_text_color;
+                            font-family: $font_family_body;
+                        }
+                        .successfully-dsc{
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            text-align: center;
+                            color: $secondary_text_color;
+                            font-family: $font_family_body;
+                        }
+                    }
+                    .successfully-reset-action{
+                        width: 100%;
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
