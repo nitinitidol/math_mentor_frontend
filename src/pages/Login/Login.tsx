@@ -107,7 +107,7 @@ const Login = () => {
                         />
                       </div>
 
-                      <div className="forgot-link">
+                      <div className="forgot-link" style ={{marginTop : "1px"}}>
                         <Link to="/forgot_password">Forgot password?</Link>
                       </div>
 

@@ -6,19 +6,19 @@ import EyeLine from "../../assets/images/vactor/eye-line.svg"; // ✅ Eye with l
 import Right_Arrow from "../../assets/images/vactor/arrow-right.svg";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { PrimaryButton } from "../../components/AllButtons/AllButtons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TitleComponent from "../../components/CommonElements/TitleComponent/TitleComponent";
-import { useDispatch } from "react-redux";
-import { setPasswordValue } from "../../Slice/credentialSlice";
+
+
 import { useAppDispatch, useAppSelector } from "../../Store/store";
 import { resetPassword } from "../../Services/auth.service";
+import { openSnackbar } from "../../Slice/snackbarSlice";
 
 const ResetPassword = () => {
   const dispatch = useAppDispatch() ; 
   const email = useAppSelector(state => state.credentials.email) ; 
-  const passwordValue  = useAppSelector(state => state.credentials.password) ; 
   const otp = useAppSelector(state => state.credentials.otp) ; 
-
+  const navigate = useNavigate() ; 
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -49,17 +49,21 @@ const ResetPassword = () => {
 
   const handleSubmit = async  (e : any) => {
     e.preventDefault() ;
-    console.log("reset password")
     if(password === confirmPassword){
-      dispatch(setPasswordValue(password)) ;
       const credentialsValue    = {
-        email : "krupalitandel0501@gmail.com" , 
+        email : email, 
         otp : otp , 
-        password : password  , 
+        new_password : password  , 
       }
       dispatch(resetPassword(credentialsValue)).unwrap().then((response) => {
+        if(response.status) {
+          dispatch(openSnackbar({message : response.message , severity : "success"}));
+          setTimeout(() => {navigate("/login")} , 1000)
+        }
+        else {
+          dispatch(openSnackbar({message : "Something went wrong" , severity : "error"}));
 
-        console.log("response " , response)
+        }
       }).catch((error : any) => {
         console.log("Not able to reset password" , error)
       })  ; 
@@ -68,7 +72,7 @@ const ResetPassword = () => {
   }
 
   const isFormValid = password !== "" && confirmPassword !== "" && passwordError === "" && confirmPasswordError === "";
- console.log("email password otp " ,  email , password , otp)
+ 
   return (
     <>
       <div className="auth-wrapper">
@@ -84,7 +88,6 @@ const ResetPassword = () => {
                 <p className="content-subdsc-text">
                   Password was successfully sent to the email ID, Kindly enter the password below.
                 </p>
-                {/* <form className="w-100"> */}
                 <div className="w-100">
                   <div className="input-form-field-wrapper">
                     <TextField
@@ -169,7 +172,7 @@ const ResetPassword = () => {
                     </Link>
                   </div>
                   </div>
-                {/* </form> */}
+               
 
               </div>
             </div>

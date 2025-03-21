@@ -7,11 +7,12 @@ import { PrimaryButton } from "../../components/AllButtons/AllButtons";
 import TitleComponent from "../../components/CommonElements/TitleComponent/TitleComponent";
 import { useDispatch } from "react-redux";
 import { setOtp } from "../../Slice/credentialSlice";
+import { useAppSelector } from "../../Store/store";
 
 const SendOTP = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch() ; 
-
+  const email = useAppSelector(state => state.credentials.email) ; 
   const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
 
 
@@ -39,7 +40,7 @@ const SendOTP = () => {
 
   const isOtpComplete = otpValues.every((digit) => digit !== "");
 
-  console.log("Otp " , otpValues)
+ 
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +99,7 @@ const SendOTP = () => {
                   </div>
                   
                   <div className="auth-info-text">
-                    prince_cummerata29@hotmail.com
+                    {email || "test@gmail.com"}
                     <a className="auth-link" href="/">
                       <img src={EditIcon} alt="Edit" />
                     </a>

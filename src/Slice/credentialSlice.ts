@@ -1,16 +1,17 @@
 import { createSlice , PayloadAction } from "@reduxjs/toolkit";
+import { sendForgotPasswordRequest } from "../Services/auth.service";
 
 
 interface credentails {
-    email : string ; 
-    otp :  string ;
-    password : string ;
+    email : string | null ; 
+    otp :  string | null ;
+    loading : boolean ; 
 }
 
 const initialState : credentails = {
     email : "" , 
     otp : "" , 
-    password : "" , 
+    loading : false ,
 }
 
 const credentialSlice  = createSlice({
@@ -23,12 +24,22 @@ const credentialSlice  = createSlice({
         setEmail : (state , action : PayloadAction<string>) => {
             state.email = action.payload ;  
         } , 
-        setPasswordValue : (state , action : PayloadAction<string>) => {
-            state.password = action.payload ;  
-        } ,
+        
+    } , 
+    extraReducers : (builder) => {
+        builder
+        .addCase(sendForgotPasswordRequest.pending ,  (state) => {
+            state.loading = true ; 
+        })
+        .addCase(sendForgotPasswordRequest.fulfilled ,  (state) => {
+            state.loading = false ;
+        })
+        .addCase(sendForgotPasswordRequest.rejected , (state) => {
+            state.loading = false ; 
+        });
     }
 }) ; 
 
-export const {setEmail ,  setOtp  , setPasswordValue } = credentialSlice.actions ; 
+export const {setEmail ,  setOtp  } = credentialSlice.actions ; 
 
 export default credentialSlice.reducer ; 
