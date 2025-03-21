@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
@@ -8,10 +7,6 @@ import Price from "./pages/Price/Price";
 import ExerciseTest from "./pages/ExerciseTest/ExerciseTest";
 import SendOTP from "./pages/SendOTP/SendOTP";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
-import { Alert, Snackbar } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "./Store/store";
-import { closeSnackbar } from "./Slice/snackbarSlice";
 import SnackBar from "./components/Snackbar/Snackbar";
 
 function App() { 
@@ -19,12 +14,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<SignUp />} />
+          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/send-otp" element={<SendOTP />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/sign_up" element={<SignUp />} />
+          <Route path="/forgot_password" element={<ForgotPassword />} />
+          <Route path="/send_otp" element={<SendOTP />} />
+          <Route path="/reset_password" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/price" element={<Price />} />
           <Route path="/test" element={<ExerciseTest />} />

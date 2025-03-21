@@ -30,7 +30,8 @@ const Login = () => {
       const response = await dispatch(loginUser(values)).unwrap();
       console.log("response data " , response)
       if (response.status) {
-        localStorage.setItem("auth-token", response.access_token);
+        console.log("token",response.data.access_token)
+        localStorage.setItem("auth-token", response.data.access_token);
         dispatch(openSnackbar({message : response.message + " 🎉" , severity : "success" }));
       } else {
         dispatch(openSnackbar({message : response.message || "Invalid Credentials ❌" , severity : "error"  }))
@@ -106,8 +107,8 @@ const Login = () => {
                         />
                       </div>
 
-                      <div className="forgot-link">
-                        <Link to="/forgot-password">Forgot password?</Link>
+                      <div className="forgot-link" style ={{marginTop : "1px"}}>
+                        <Link to="/forgot_password">Forgot password?</Link>
                       </div>
 
                       <div className="auth-action-control">
@@ -119,7 +120,7 @@ const Login = () => {
 
                       <div className="auth-info-text">
                         Don’t have an account?{" "}
-                        <Link className="auth-link" to="/sign-up">
+                        <Link className="auth-link" to="/sign_up">
                           Sign up
                         </Link>
                       </div>

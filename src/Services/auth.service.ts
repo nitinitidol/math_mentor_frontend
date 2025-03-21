@@ -24,7 +24,7 @@ export const loginUser = createAsyncThunk(
 
 export const signUpPostCall = createAsyncThunk(
   "auth/signup",
-  async (user: any, { dispatch, rejectWithValue }) => {
+  async (user: any, { rejectWithValue }) => {
     try {
       const response = await server.post("/auth/signup", user , {
         headers : {
@@ -34,6 +34,33 @@ export const signUpPostCall = createAsyncThunk(
       return response.data ;   
     } catch (error: any) {
       return rejectWithValue(error.response.data || "Sign up failed ")
+    }
+  }
+);
+
+export const sendForgotPasswordRequest = createAsyncThunk(
+  "forgotPassword/sendForgotPasswordRequest",
+  async (email : Object, { rejectWithValue }) => {
+    try {
+      const response = await server.post("/auth/forgot-password",  email );
+      return response.data ;
+    } catch (error : any ) {
+      return rejectWithValue(error.response.data  || "Something went wrong");
+    }
+  }
+);
+export const resetPassword = createAsyncThunk(
+  "auth/resetPassword" , 
+  async (credentialsValue  : any ,  {rejectWithValue}) => {
+    try{
+      const response = await server.post("/auth/reset-password" , credentialsValue , {
+        headers : {
+          "Content-Type" : "application/json" , 
+        }
+      }); 
+      return response.data ;
+    }catch(error : any) {
+      return rejectWithValue(error.response.data || "Something went wrong")
     }
   }
 );
