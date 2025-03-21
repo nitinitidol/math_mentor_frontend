@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Login/Login.scss";
 import Banner1 from "../../assets/images/banner/auth-banner.svg";
 import Auth_Logo from "../../assets/images/logo/logo.svg";
@@ -6,11 +7,85 @@ import Auth_OTP_Logo from "../../assets/images/logo/otp-logo.svg";
 import Eye from "../../assets/images/vactor/eye.svg";
 import EyeLine from "../../assets/images/vactor/eye-line.svg";
 import Right_Arrow from "../../assets/images/vactor/arrow-right.svg";
-import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { PrimaryButton } from "../../components/AllButtons/AllButtons";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { sendForgotPasswordRequest } from "../../Services/auth.service";
+import { AppDispatch, RootState } from "../../Store/store";
+import { openSnackbar } from "../../Slice/snackbarSlice";
 
 const ForgotPassword = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { email, loading, error, message } = useSelector(
+    (state: RootState) => state.forgotPassword
+  );
+  
+  const [emailInput, setEmailInput] = React.useState<string>(email || "");
+  const [emailError, setEmailError] = React.useState<string>("");
+  const [otpBtnDisabled, setOtpBtnDisabled] = React.useState(true);
+  const navigate=useNavigate();
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmailInput(value);
+
+    
+    if (!emailRegex.test(value)) {
+      setEmailError("Invalid email format");
+      setOtpBtnDisabled(true);
+    } else {
+      setEmailError("");
+      setOtpBtnDisabled(false);
+    }
+  };
+
+  
+  const handleSendOTP = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    
+    if (emailRegex.test(emailInput)) {
+      console.log("email",emailInput);
+      const email={email:emailInput};
+      dispatch(sendForgotPasswordRequest(email));
+    } else {
+      setEmailError("Please enter a valid email address.");
+    }
+  };
+
+  const resetHandler=(e: React.FormEvent)=>{
+      e.preventDefault();
+      
+    
+    if (emailRegex.test(emailInput)) {
+      console.log("email",emailInput);
+      const email={email:emailInput};
+      dispatch(sendForgotPasswordRequest(email));
+    } else {
+      setEmailError("Please enter a valid email address.");
+    }
+  }
+
+  
+  useEffect(() => {
+    if (message) {
+      setEmailInput("");
+      navigate("/send-otp");
+    }
+  }, [message,navigate]);
+
+  useEffect(() => {
+    if (error) {
+      dispatch(openSnackbar({ message: error, severity: "error" }));
+    }
+  }, [error, dispatch]);
+
+  const backToLogin=()=>{
+    navigate("/login")
+  }
   return (
     <>
       <div className="auth-wrapper">
@@ -18,8 +93,8 @@ const ForgotPassword = () => {
           <div className="col-md-6 p-0">
             <div className="auth-banner-block">
               <div className="auth-banner-content">
-              <div className="auth-banner-img">
-                <img src={Banner1} alt="Banner1" />
+                <div className="auth-banner-img">
+                  <img src={Banner1} alt="Banner1" />
                 </div>
                 <h4 className="banner-content-title">Master with AI</h4>
                 <p className="banner-content-dsc-text">
@@ -40,34 +115,51 @@ const ForgotPassword = () => {
                   No worries! Enter your email, and we'll send you a 6-digit
                   OTP.
                 </p>
-                <form action="" className="w-100">
+                <form onSubmit={handleSendOTP} className="w-100">
                   <div className="input-form-field-wrapper">
                     <TextField
                       className="out-label-input-text"
-                      id="otp"
-                      name="otp"
-                      placeholder="Enter OTP here"
+                      id="email"
+                      name="email"
+                      placeholder="Enter email here"
                       margin="normal"
                       variant="outlined"
                       fullWidth
-                      type="number"
+                      type="email"
+                      value={emailInput}
+                      onChange={handleEmailChange}
                     />
+                    {emailError && (
+                      <p
+                        style={{
+                          fontSize: "12px",
+                          color: "red",
+                          marginLeft: "0",
+                          fontWeight: "normal",
+                          alignSelf: "flex-start",
+                          marginTop: "-5px",
+                        }}
+                      > 
+                        {emailError}
+                      </p>
+                    )}
                   </div>
 
                   <div className="auth-action-control">
-                    <PrimaryButton>
-                      Send OTP
+                    <PrimaryButton disabled={otpBtnDisabled || loading} onClick={handleSendOTP} 
+                    style={{backgroundColor: (otpBtnDisabled || loading) ? "#848884" : "" , marginTop:"-5px"}}>
+                      {"Send OTP"}
                       <img src={Right_Arrow} alt="Right_Arrow" />
                     </PrimaryButton>
                   </div>
                   <div className="auth-info-text">
                     Didn't receive an email,{" "}
-                    <Link className="auth-link" to="/">
+                    <Link className="auth-link" to="/" onClick={resetHandler}>
                       Resend?
                     </Link>
                   </div>
                   <div className="back-btn">
-                    <Button  variant="text">
+                    <Button variant="text" onClick={backToLogin}>
                       {" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

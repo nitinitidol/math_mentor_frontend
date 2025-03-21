@@ -58,7 +58,7 @@ const SignUp = () => {
           setFieldTouched(key, true, true);
         });
 
-        const response = dispatch(signUpPostCall(values)).unwrap().then((response)=>{
+         dispatch(signUpPostCall(values)).unwrap().then((response)=>{
           if(response.status){
             dispatch(openSnackbar({message : response.message , severity : "success"}))
           }
@@ -175,6 +175,7 @@ const SignUp = () => {
                           placeholder="Grade"
                           margin="normal"
                           variant="outlined"
+                          id="grade"
                           fullWidth
                           name="grade"
                           onChange={handleChange}
@@ -359,7 +360,7 @@ const SignUp = () => {
                   </div>
                   <div className="auth-info-text">
                     Already have an account?{" "}
-                    <Link className="auth-link" to="/">
+                    <Link className="auth-link" to="/login">
                       Sign in
                     </Link>
                   </div>

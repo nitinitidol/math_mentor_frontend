@@ -37,3 +37,22 @@ export const signUpPostCall = createAsyncThunk(
     }
   }
 );
+
+export const sendForgotPasswordRequest = createAsyncThunk(
+  "forgotPassword/sendForgotPasswordRequest",
+  async (email : Object, { rejectWithValue }) => {
+    try {
+      // Replace with your backend API URL
+      const response = await server.post("/auth/forgot-password",  email );
+      console.log(response);
+      if (response.data.status) {
+        return { message: response.data.message };
+      } else if(response.data.code===404){
+        console.log("response data",response);
+        return rejectWithValue("Email not found");
+      }
+    } catch (error) {
+      return rejectWithValue("Something went wrong");
+    }
+  }
+);
