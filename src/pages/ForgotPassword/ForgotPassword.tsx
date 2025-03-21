@@ -4,7 +4,6 @@ import "../Login/Login.scss";
 import Auth_OTP_Logo from "../../assets/images/logo/otp-logo.svg";
 import Right_Arrow from "../../assets/images/vactor/arrow-right.svg";
 import { Button, TextField } from "@mui/material";
-import { Button, TextField } from "@mui/material";
 import { PrimaryButton } from "../../components/AllButtons/AllButtons";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
