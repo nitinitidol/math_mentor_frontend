@@ -5,20 +5,23 @@ import Auth_OTP_Logo from "../../assets/images/logo/otp-logo.svg";
 import EditIcon from "../../assets/images/vactor/edit-icon.svg";
 import { PrimaryButton } from "../../components/AllButtons/AllButtons";
 import TitleComponent from "../../components/CommonElements/TitleComponent/TitleComponent";
+import { useDispatch } from "react-redux";
+import { setOtp } from "../../Slice/credentialSlice";
 
 const SendOTP = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch() ; 
 
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
 
 
   const handleChange = (index: number, value: string) => {
    
     if (!/^\d*$/.test(value)) return;
 
-    const newOtp = [...otp];
+    const newOtp = [...otpValues];
     newOtp[index] = value;
-    setOtp(newOtp);
+    setOtpValues(newOtp);
 
   
     if (value !== "" && index < 5) {
@@ -28,20 +31,21 @@ const SendOTP = () => {
 
   
   const handleKeyDown = (index: number, event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Backspace" && otp[index] === "" && index > 0) {
+    if (event.key === "Backspace" && otpValues[index] === "" && index > 0) {
       document.getElementById(`otp-${index - 1}`)?.focus();
     }
   };
 
 
-  const isOtpComplete = otp.every((digit) => digit !== "");
+  const isOtpComplete = otpValues.every((digit) => digit !== "");
 
-  console.log("Otp " , otp)
+  console.log("Otp " , otpValues)
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isOtpComplete) {
-      navigate("/reset-password"); // Redirect to Reset Password Page
+      dispatch(setOtp(otpValues.join(""))) ; 
+      navigate("/reset_password"); 
     }
   };
 
@@ -61,10 +65,9 @@ const SendOTP = () => {
                   No worries! Enter your email, and we'll send you a 6-digit OTP.
                 </p>
                 
-                {/* ✅ OTP Form */}
                 <form onSubmit={handleSubmit} className="w-100">
                   <div className="otp-input-form-field">
-                    {otp.map((digit, index) => (
+                    {otpValues.map((digit, index) => (
                       <input
                         key={index}
                         id={`otp-${index}`}
@@ -81,7 +84,15 @@ const SendOTP = () => {
                   </div>
 
                   <div className="auth-action-control">
-                    <PrimaryButton type="submit" disabled={!isOtpComplete}>
+                    <PrimaryButton
+                      type="submit"
+                      disabled={!isOtpComplete}
+                      style={{
+                        backgroundColor: isOtpComplete ? "#4F46E5" : "#505050", 
+                        color: "#fff",
+                        cursor: isOtpComplete ? "pointer" : "not-allowed",
+                      }}
+                    >
                       Reset Now
                     </PrimaryButton>
                   </div>

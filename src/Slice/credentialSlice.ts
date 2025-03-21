@@ -23,12 +23,12 @@ const credentialSlice  = createSlice({
         setEmail : (state , action : PayloadAction<string>) => {
             state.email = action.payload ;  
         } , 
-        setPassword : (state , action : PayloadAction<string>) => {
+        setPasswordValue : (state , action : PayloadAction<string>) => {
             state.password = action.payload ;  
         } ,
     }
 }) ; 
 
-export const {setEmail ,  setOtp  , setPassword } = credentialSlice.actions ; 
+export const {setEmail ,  setOtp  , setPasswordValue } = credentialSlice.actions ; 
 
 export default credentialSlice.reducer ; 

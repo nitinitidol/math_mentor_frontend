@@ -107,7 +107,7 @@ const Login = () => {
                       </div>
 
                       <div className="forgot-link">
-                        <Link to="/forgot-password">Forgot password?</Link>
+                        <Link to="/forgot_password">Forgot password?</Link>
                       </div>
 
                       <div className="auth-action-control">
@@ -119,7 +119,7 @@ const Login = () => {
 
                       <div className="auth-info-text">
                         Don’t have an account?{" "}
-                        <Link className="auth-link" to="/sign-up">
+                        <Link className="auth-link" to="/sign_up">
                           Sign up
                         </Link>
                       </div>

@@ -58,7 +58,7 @@ const SignUp = () => {
           setFieldTouched(key, true, true);
         });
 
-        const response = dispatch(signUpPostCall(values)).unwrap().then((response)=>{
+        dispatch(signUpPostCall(values)).unwrap().then((response)=>{
           if(response.status){
             dispatch(openSnackbar({message : response.message , severity : "success"}))
           }
