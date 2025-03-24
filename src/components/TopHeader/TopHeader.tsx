@@ -8,6 +8,7 @@ import FillDownArrow from "../../assets/images/vactor/fill-down-arrow.svg";
 import UserIcon from "../../assets/images/vactor/user-icon.svg";
 import Compass from "../../assets/images/vactor/compass.svg";
 import Setting from "../../assets/images/vactor/setting.svg";
+import EmptyNotification from "../../assets/images/vactor/Empty-notification.svg";
 import { Button, Divider, Menu, MenuItem } from "@mui/material";
 interface HeaderProps {
   onMenuToggle: () => void;
@@ -103,6 +104,14 @@ const TopHeader : React.FC<HeaderProps> = ({ onMenuToggle }) => {
                   </p>
                   <p className="notify-items-time">2 min ago</p>
                 </MenuItem>
+
+
+                <div className="empty-notification-block"> 
+                    <img src={EmptyNotification} alt="" /> 
+                    <p className="empty-notification-dsc">There are no records of courses yet. 
+                    Please check back later.</p> 
+                </div> 
+
                 <div className="notify-footer">
                   <Link to="">
                     View All Notifications{" "}

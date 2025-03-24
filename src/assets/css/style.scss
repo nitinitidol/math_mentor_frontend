@@ -703,3 +703,64 @@ input {
     }
   }
 }
+
+// User Guide intro js 
+// .introjs-helperLayer{
+// }
+.introjs-tooltipReferenceLayer{
+  .introjs-tooltip{
+    background-color: transparent !important;
+    box-shadow: none;
+    .introjs-tooltip-header{
+      .introjs-skipbutton{
+        color: $White_color;
+      }
+    }
+    .introjs-tooltiptext{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $White_color;
+      font-family: $font_family_body;
+    }
+    .introjs-bullets{
+      display: none;
+    }
+    .introjs-helperNumberLayer{
+      display: none;
+    }
+    .introjs-arrow{
+      display: none;
+    }
+    .introjs-tooltipbuttons{
+      border: 0px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      .introjs-prevbutton{
+        background-color: $border_light_color;
+        color: $primary_text_color;
+        font-size: 14px;
+        font-weight: 400;
+        height: 28px;
+        border: 0px;
+        border-radius: 4px;
+        text-align: center;
+        padding: 2px 5px;
+        font-family: $font_family_body;
+      }
+      .introjs-nextbutton{
+        background-color: $primary_color;
+        color: $White_color;
+        font-size: 14px;
+        font-weight: 400;
+        height: 28px;
+        border: 0px;
+        border-radius: 4px;
+        text-align: center;
+        padding: 2px 5px;
+        font-family: $font_family_body;
+      }
+    }
+  }
+}

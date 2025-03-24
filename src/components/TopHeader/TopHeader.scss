@@ -297,3 +297,19 @@
 
     }
 }
+// empty notification 
+.empty-notification-block{ 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    padding: 40px 0px; 
+    .empty-notification-dsc{ 
+        font-size: 14px; 
+        font-weight: 400; 
+        line-height: 20px; 
+        color: $secondary_text_color; 
+        text-align: center; 
+    } 
+} 

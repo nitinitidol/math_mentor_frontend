@@ -9,7 +9,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 
     .chat-history-header {
         padding-bottom: 30px;
@@ -101,6 +101,7 @@
         // position: fixed;
         // bottom: 0px;
         // width: auto;
+        margin-top: auto;
         .token-upgread-block {
             border-radius: 16px;
             background-color: $light_blue_hover;
