@@ -105,11 +105,13 @@ const TopHeader : React.FC<HeaderProps> = ({ onMenuToggle }) => {
                   <p className="notify-items-time">2 min ago</p>
                 </MenuItem>
 
-                <div className="empty-notification-block">
-                    <img src={EmptyNotification} alt="" />
-                    <p className="empty-notification-dsc">There are no records of courses yet.
-                    Please check back later.</p>
-                </div>
+
+                <div className="empty-notification-block"> 
+                    <img src={EmptyNotification} alt="" /> 
+                    <p className="empty-notification-dsc">There are no records of courses yet. 
+                    Please check back later.</p> 
+                </div> 
+
                 <div className="notify-footer">
                   <Link to="">
                     View All Notifications{" "}
